@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Official website for jinshuihu mobile apps, including Click Cast — a smart TV remote for iOS." />
+  <title>jinshuihu</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f6f8fb;
+      --card: #ffffff;
+      --text: #102033;
+      --muted: #64748b;
+      --line: #dbe3ee;
+      --accent: #7c3aed;
+      --accent-soft: #f3e8ff;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, #ede9fe 0, transparent 34%),
+        linear-gradient(180deg, #fbfdff 0%, var(--bg) 100%);
+    }
+
+    main {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 56px 20px 72px;
+    }
+
+    .hero {
+      margin-bottom: 36px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 16px 0 12px;
+      font-size: clamp(32px, 6vw, 48px);
+      line-height: 1.08;
+    }
+
+    .hero p {
+      max-width: 640px;
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.7;
+      color: var(--muted);
+    }
+
+    .card {
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: var(--card);
+      box-shadow: 0 14px 40px rgba(15, 23, 42, 0.06);
+      margin-bottom: 20px;
+    }
+
+    .card h2 {
+      margin: 0 0 8px;
+      font-size: 24px;
+    }
+
+    .card .subtitle {
+      margin: 0 0 16px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .links {
+      display: grid;
+      gap: 10px;
+    }
+
+    .links a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 600;
+      background: #fafbfc;
+      transition: border-color 160ms ease, background 160ms ease;
+    }
+
+    .links a:hover {
+      border-color: #c4b5fd;
+      background: #f5f3ff;
+    }
+
+    .links a span {
+      color: var(--accent);
+      font-size: 14px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .contact {
+      padding: 18px 20px;
+      border-radius: 16px;
+      background: #fff7ed;
+      border: 1px solid #fed7aa;
+      color: #7c2d12;
+      line-height: 1.6;
+    }
+
+    .contact a {
+      color: #9a3412;
+      font-weight: 600;
+    }
+
+    footer {
+      margin-top: 28px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero">
+      <span class="eyebrow">Developer Website</span>
+      <h1>jinshuihu</h1>
+      <p>We build simple, practical iOS apps. This page provides public support and legal information for our products on the App Store.</p>
+    </section>
+
+    <section class="card">
+      <h2>Click Cast</h2>
+      <p class="subtitle">Turn your iPhone into a smart TV remote on the same Wi-Fi network. Discover, pair, and control compatible TVs without a physical remote.</p>
+      <div class="links">
+        <a href="https://jinshuihupro.github.io/legal/remote-control/support.html">
+          Support
+          <span>Open</span>
+        </a>
+        <a href="https://jinshuihupro.github.io/legal/remote-control/privacy.html">
+          Privacy Policy
+          <span>Open</span>
+        </a>
+        <a href="https://jinshuihupro.github.io/legal/remote-control/terms.html">
+          Terms of Service
+          <span>Open</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="contact">
+      Need help? Contact us at
+      <a href="mailto:jinshuihu.app@gmail.com">jinshuihu.app@gmail.com</a>.
+      Please include your device model, iOS version, TV brand/model, and a short description of the issue.
+    </section>
+
+    <footer>© 2026 jinshuihu. All rights reserved.</footer>
+  </main>
+</body>
+</html>
