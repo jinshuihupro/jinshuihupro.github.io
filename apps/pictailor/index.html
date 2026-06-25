@@ -25,9 +25,9 @@
     <section class="card">
       <h2 class="section-title" id="links-title">Public Links</h2>
       <div class="links">
-        <a id="support-link" href="/pictailor-support.html#english"><strong class="link-label">Support</strong><span>Open</span></a>
-        <a id="privacy-link" href="/pictailor-privacy.html#english"><strong class="link-label">Privacy Policy</strong><span>Open</span></a>
-        <a id="terms-link" href="/pictailor-terms.html#english"><strong class="link-label">Terms of Service</strong><span>Open</span></a>
+        <a id="support-link" href="/pictailor-support.html?lang=en"><strong class="link-label">Support</strong><span>Open</span></a>
+        <a id="privacy-link" href="/pictailor-privacy.html?lang=en"><strong class="link-label">Privacy Policy</strong><span>Open</span></a>
+        <a id="terms-link" href="/pictailor-terms.html?lang=en"><strong class="link-label">Terms of Service</strong><span>Open</span></a>
       </div>
     </section>
 
@@ -45,25 +45,25 @@
         hero:
           "PicTailor helps you stitch screenshots, crop long images, capture webpage snapshots, and export clean results from your iPhone. Choose your preferred language below.",
         title: "Public Links",
-        support: { label: "Support", action: "Open", href: "/pictailor-support.html#english" },
-        privacy: { label: "Privacy Policy", action: "Open", href: "/pictailor-privacy.html#english" },
-        terms: { label: "Terms of Service", action: "Open", href: "/pictailor-terms.html#english" }
+        support: { label: "Support", action: "Open", href: "/pictailor-support.html?lang=en" },
+        privacy: { label: "Privacy Policy", action: "Open", href: "/pictailor-privacy.html?lang=en" },
+        terms: { label: "Terms of Service", action: "Open", href: "/pictailor-terms.html?lang=en" }
       },
       "zh-hans": {
         hero:
           "PicTailor 帮助你拼接截图、裁剪长图、捕获网页长截图，并在 iPhone 上导出清爽结果。请选择下方语言。",
         title: "公共链接",
-        support: { label: "支持", action: "打开", href: "/pictailor-support.html#zh-hans" },
-        privacy: { label: "隐私政策", action: "打开", href: "/pictailor-privacy.html#zh-hans" },
-        terms: { label: "服务条款", action: "打开", href: "/pictailor-terms.html#zh-hans" }
+        support: { label: "支持", action: "打开", href: "/pictailor-support.html?lang=zh-hans" },
+        privacy: { label: "隐私政策", action: "打开", href: "/pictailor-privacy.html?lang=zh-hans" },
+        terms: { label: "服务条款", action: "打开", href: "/pictailor-terms.html?lang=zh-hans" }
       },
       "zh-hant": {
         hero:
           "PicTailor 幫助你拼接截圖、裁剪長圖、擷取網頁長截圖，並在 iPhone 上匯出清爽結果。請選擇下方語言。",
         title: "公共連結",
-        support: { label: "支援", action: "打開", href: "/pictailor-support.html#zh-hant" },
-        privacy: { label: "隱私政策", action: "打開", href: "/pictailor-privacy.html#zh-hant" },
-        terms: { label: "服務條款", action: "打開", href: "/pictailor-terms.html#zh-hant" }
+        support: { label: "支援", action: "打開", href: "/pictailor-support.html?lang=zh-hant" },
+        privacy: { label: "隱私政策", action: "打開", href: "/pictailor-privacy.html?lang=zh-hant" },
+        terms: { label: "服務條款", action: "打開", href: "/pictailor-terms.html?lang=zh-hant" }
       }
     };
 
@@ -73,6 +73,15 @@
     const privacyLink = document.getElementById("privacy-link");
     const termsLink = document.getElementById("terms-link");
     const languageButtons = document.querySelectorAll("#language-switcher [data-lang]");
+
+    function resolveLanguage() {
+      const params = new URLSearchParams(window.location.search);
+      const queryLanguage = params.get("lang");
+      if (contentByLanguage[queryLanguage]) {
+        return queryLanguage;
+      }
+      return "en";
+    }
 
     function updateLink(link, data) {
       link.href = data.href;
@@ -91,11 +100,17 @@
       languageButtons.forEach((button) => {
         button.classList.toggle("active", button.dataset.lang === language);
       });
+
+      const url = new URL(window.location.href);
+      url.searchParams.set("lang", language);
+      window.history.replaceState({}, "", url);
     }
 
     languageButtons.forEach((button) => {
       button.addEventListener("click", () => applyLanguage(button.dataset.lang));
     });
+
+    applyLanguage(resolveLanguage());
   </script>
 </body>
 </html>

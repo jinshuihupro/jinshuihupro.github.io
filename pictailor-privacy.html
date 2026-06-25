@@ -90,6 +90,20 @@
   <script>
     const languageButtons = document.querySelectorAll("#language-switcher [data-lang]");
     const panels = document.querySelectorAll("[data-panel]");
+    const hashLanguageMap = {
+      "#english": "en",
+      "#zh-hans": "zh-hans",
+      "#zh-hant": "zh-hant"
+    };
+
+    function resolveLanguage() {
+      const params = new URLSearchParams(window.location.search);
+      const queryLanguage = params.get("lang");
+      if (queryLanguage === "en" || queryLanguage === "zh-hans" || queryLanguage === "zh-hant") {
+        return queryLanguage;
+      }
+      return hashLanguageMap[window.location.hash] || "en";
+    }
 
     function applyLanguage(language) {
       languageButtons.forEach((button) => {
@@ -99,11 +113,18 @@
       panels.forEach((panel) => {
         panel.classList.toggle("hidden", panel.dataset.panel !== language);
       });
+
+      const url = new URL(window.location.href);
+      url.searchParams.set("lang", language);
+      url.hash = "";
+      window.history.replaceState({}, "", url);
     }
 
     languageButtons.forEach((button) => {
       button.addEventListener("click", () => applyLanguage(button.dataset.lang));
     });
+
+    applyLanguage(resolveLanguage());
   </script>
 </body>
 </html>
