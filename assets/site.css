@@ -155,6 +155,12 @@ main {
   text-decoration: none;
 }
 
+button.pill {
+  border: 0;
+  cursor: pointer;
+  font: inherit;
+}
+
 .pill.active {
   background: var(--accent-strong);
   color: #ffffff;
