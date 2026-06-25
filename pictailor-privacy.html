@@ -10,13 +10,13 @@
 <body>
   <main>
     <a class="back-link" href="/apps/pictailor/">← Back to PicTailor</a>
-    <div class="meta-row">
-      <a class="pill active" href="#english">English</a>
-      <a class="pill" href="#zh-hans">简体中文</a>
-      <a class="pill" href="#zh-hant">繁體中文</a>
+    <div class="meta-row" id="language-switcher">
+      <button class="pill active" type="button" data-lang="en">English</button>
+      <button class="pill" type="button" data-lang="zh-hans">简体中文</button>
+      <button class="pill" type="button" data-lang="zh-hant">繁體中文</button>
     </div>
-    <div class="legal">
-      <section id="english">
+    <div class="legal tab-shell">
+      <section class="tab-panel" data-panel="en">
         <h2>Privacy Policy</h2>
         <p>PicTailor is provided by jinshuihu.</p>
         <h3>How the App Works</h3>
@@ -39,7 +39,7 @@
         <h3>Contact</h3>
         <p>If you have privacy questions, contact <a href="mailto:pictailor.vip@gmail.com">pictailor.vip@gmail.com</a>.</p>
       </section>
-      <section id="zh-hans">
+      <section class="tab-panel hidden" data-panel="zh-hans">
         <h2>隐私政策</h2>
         <p>PicTailor 由 jinshuihu 提供。</p>
         <h3>应用功能说明</h3>
@@ -62,7 +62,7 @@
         <h3>联系我们</h3>
         <p>如果您对隐私政策有疑问，请联系 <a href="mailto:pictailor.vip@gmail.com">pictailor.vip@gmail.com</a>。</p>
       </section>
-      <section id="zh-hant">
+      <section class="tab-panel hidden" data-panel="zh-hant">
         <h2>隱私政策</h2>
         <p>PicTailor 由 jinshuihu 提供。</p>
         <h3>應用功能說明</h3>
@@ -87,5 +87,23 @@
       </section>
     </div>
   </main>
+  <script>
+    const languageButtons = document.querySelectorAll("#language-switcher [data-lang]");
+    const panels = document.querySelectorAll("[data-panel]");
+
+    function applyLanguage(language) {
+      languageButtons.forEach((button) => {
+        button.classList.toggle("active", button.dataset.lang === language);
+      });
+
+      panels.forEach((panel) => {
+        panel.classList.toggle("hidden", panel.dataset.panel !== language);
+      });
+    }
+
+    languageButtons.forEach((button) => {
+      button.addEventListener("click", () => applyLanguage(button.dataset.lang));
+    });
+  </script>
 </body>
 </html>
