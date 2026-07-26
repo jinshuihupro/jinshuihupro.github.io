@@ -10,18 +10,238 @@
 <body>
   <main>
     <a class="back-link" href="/apps/click-cast/">← Back to Click Cast</a>
-    <div class="legal">
-      <section>
+    <div class="meta-row" id="language-switcher">
+      <button class="pill active" type="button" data-lang="en">English</button>
+      <button class="pill" type="button" data-lang="zh-hans">简体中文</button>
+      <button class="pill" type="button" data-lang="zh-hant">繁體中文</button>
+    </div>
+    <div class="legal tab-shell">
+      <section class="tab-panel" data-panel="en">
         <h2>Privacy Policy</h2>
-        <p>Click Cast provides remote control features for compatible TVs.</p>
-        <p>We may process limited technical information required to keep the app working, improve stability, and respond to support requests you send us by email.</p>
-        <p>If the app integrates third-party services such as analytics, crash reporting, or advertising, those services may process device or usage data according to their own policies and platform requirements.</p>
-        <p>We do not ask you to create an account to use the core remote control features.</p>
-        <p>If you contact us for support, the information you include in your email will only be used to troubleshoot your issue and reply to you.</p>
+        <p>This Privacy Policy explains how Click Cast (“the app”), provided by jinshuihu, handles information when you use the app. We do not require you to create an account to use core remote-control features.</p>
+
+        <h3>How the App Works</h3>
+        <p>Click Cast discovers and controls compatible smart TVs on your local Wi-Fi network, and may offer casting, keyboard, touchpad, quick launch, Premium purchases, ads for free users, and an optional Apple Watch companion.</p>
+
+        <h3>Information We Process</h3>
+        <ul>
+          <li><strong>Local network / device discovery data</strong> needed to find and communicate with TVs on the same Wi-Fi network (processed on your local network)</li>
+          <li><strong>Photos or videos you select</strong> only when you choose media to cast; transfer happens over your local network and is not uploaded to Click Cast servers for storage</li>
+          <li><strong>Purchase / subscription status</strong> related to Premium entitlements (billing is handled by Apple; we may receive entitlement status via Apple / purchase infrastructure such as RevenueCat to unlock features)</li>
+          <li><strong>Diagnostic and crash data</strong> used to improve stability (for example via crash reporting services)</li>
+          <li><strong>Advertising identifiers / ad interaction data</strong> if ads are shown to free users, processed by advertising SDKs according to their policies and platform rules</li>
+          <li><strong>Support emails</strong> you voluntarily send us, used only to troubleshoot and reply</li>
+        </ul>
+
+        <h3>How Information Is Used</h3>
+        <ul>
+          <li>To provide remote control, casting, and related app features</li>
+          <li>To unlock Premium features and restore purchases</li>
+          <li>To show ads to free users where enabled</li>
+          <li>To investigate crashes and improve reliability</li>
+          <li>To respond to support requests</li>
+        </ul>
+
+        <h3>Data Sharing</h3>
+        <p>We do not sell your personal information. Limited data may be processed by third-party providers that help operate the app, such as:</p>
+        <ul>
+          <li>Apple (App Store billing, subscriptions, and platform services)</li>
+          <li>Purchase entitlement infrastructure (for example RevenueCat)</li>
+          <li>Crash reporting / analytics providers</li>
+          <li>Advertising providers (for free users when ads are enabled)</li>
+        </ul>
+        <p>These providers process data according to their own policies and only as needed to provide their services.</p>
+
+        <h3>Permissions</h3>
+        <ul>
+          <li><strong>Local Network</strong> — required to discover and control TVs on the same Wi-Fi</li>
+          <li><strong>Photos</strong> — requested only when you select media to cast</li>
+        </ul>
+
+        <h3>Data Retention</h3>
+        <p>Local control and casting traffic stays on your network. Entitlement and diagnostic data retained by us or our providers is kept only as needed to operate the app, comply with legal obligations, or resolve issues, then deleted or anonymized where practical.</p>
+
+        <h3>Your Choices</h3>
+        <ul>
+          <li>You can deny optional permissions; some features may become unavailable</li>
+          <li>You can manage or cancel subscriptions in App Store account settings</li>
+          <li>You can contact us to ask privacy-related questions</li>
+        </ul>
+
+        <h3>Children</h3>
+        <p>The app is not directed at children under 13 (or the equivalent minimum age in your region). We do not knowingly collect personal information from children.</p>
+
+        <h3>Changes</h3>
+        <p>We may update this Privacy Policy from time to time. The updated version will be posted on this page.</p>
+
         <h3>Contact</h3>
-        <p>Email: <a href="mailto:jinshuihu.app@gmail.com">jinshuihu.app@gmail.com</a></p>
+        <p>Privacy questions: <a href="mailto:jinshuihu.app@gmail.com">jinshuihu.app@gmail.com</a></p>
+        <p>Terms of Use: <a href="/click-cast-terms.html">click-cast-terms.html</a></p>
+      </section>
+
+      <section class="tab-panel hidden" data-panel="zh-hans">
+        <h2>隐私政策</h2>
+        <p>本隐私政策说明 jinshuihu 提供的 Click Cast（“本应用”）在您使用时如何处理信息。使用核心遥控功能无需注册账号。</p>
+
+        <h3>应用功能说明</h3>
+        <p>Click Cast 可在同一 Wi-Fi 下发现并控制兼容智能电视，并可能提供投屏、键盘、触控板、快捷启动、Premium 购买、免费用户广告，以及可选的 Apple Watch 配套应用。</p>
+
+        <h3>我们处理的信息</h3>
+        <ul>
+          <li><strong>本地网络 / 设备发现数据</strong>：用于在同一 Wi-Fi 下发现并与电视通信（在局域网内处理）</li>
+          <li><strong>您选择的照片或视频</strong>：仅在投屏时涉及；通过局域网传输，不会上传到 Click Cast 服务器存储</li>
+          <li><strong>购买 / 订阅状态</strong>：与 Premium 权益相关（账单由 Apple 处理；我们可能通过 Apple / 购买基础设施如 RevenueCat 获取权益状态以解锁功能）</li>
+          <li><strong>诊断与崩溃数据</strong>：用于提升稳定性（例如通过崩溃上报服务）</li>
+          <li><strong>广告标识符 / 广告互动数据</strong>：若向免费用户展示广告，可能由广告 SDK 按各自政策与平台规则处理</li>
+          <li><strong>您主动发送的支持邮件</strong>：仅用于排查问题并回复</li>
+        </ul>
+
+        <h3>信息用途</h3>
+        <ul>
+          <li>提供遥控、投屏及相关功能</li>
+          <li>解锁 Premium 功能并支持恢复购买</li>
+          <li>在启用时向免费用户展示广告</li>
+          <li>分析崩溃并改进稳定性</li>
+          <li>回复支持请求</li>
+        </ul>
+
+        <h3>数据共享</h3>
+        <p>我们不会出售您的个人信息。为维持应用运行，有限数据可能由以下第三方处理：</p>
+        <ul>
+          <li>Apple（App Store 账单、订阅与平台服务）</li>
+          <li>购买权益基础设施（例如 RevenueCat）</li>
+          <li>崩溃上报 / 分析服务</li>
+          <li>广告服务（免费用户且启用广告时）</li>
+        </ul>
+        <p>上述服务按其自身政策处理数据，且仅用于提供相应服务。</p>
+
+        <h3>权限说明</h3>
+        <ul>
+          <li><strong>本地网络</strong>：用于发现并控制同一 Wi-Fi 下的电视</li>
+          <li><strong>照片</strong>：仅在您选择投屏媒体时请求</li>
+        </ul>
+
+        <h3>保留期限</h3>
+        <p>本地遥控与投屏流量留在您的网络内。我们或服务商保留的权益与诊断数据，仅在运营应用、履行法律义务或处理问题所需范围内保存，并在可行时删除或匿名化。</p>
+
+        <h3>您的选择</h3>
+        <ul>
+          <li>您可拒绝可选权限；部分功能可能不可用</li>
+          <li>您可在 App Store 账户设置中管理或取消订阅</li>
+          <li>您可联系我们咨询隐私相关问题</li>
+        </ul>
+
+        <h3>儿童</h3>
+        <p>本应用不面向 13 岁以下儿童（或以您所在地区的同等最低年龄为准）。我们不会故意收集儿童的个人信息。</p>
+
+        <h3>政策变更</h3>
+        <p>我们可能不时更新本隐私政策，更新版本将发布于本页面。</p>
+
+        <h3>联系我们</h3>
+        <p>隐私相关问题：<a href="mailto:jinshuihu.app@gmail.com">jinshuihu.app@gmail.com</a></p>
+        <p>使用条款：<a href="/click-cast-terms.html">click-cast-terms.html</a></p>
+      </section>
+
+      <section class="tab-panel hidden" data-panel="zh-hant">
+        <h2>隱私政策</h2>
+        <p>本隱私政策說明 jinshuihu 提供的 Click Cast（「本應用」）在您使用時如何處理資訊。使用核心遙控功能無需註冊帳號。</p>
+
+        <h3>應用功能說明</h3>
+        <p>Click Cast 可在同一 Wi-Fi 下發現並控制相容智慧電視，並可能提供投屏、鍵盤、觸控板、快捷啟動、Premium 購買、免費用戶廣告，以及可選的 Apple Watch 配套應用。</p>
+
+        <h3>我們處理的資訊</h3>
+        <ul>
+          <li><strong>本地網路 / 裝置發現資料</strong>：用於在同一 Wi-Fi 下發現並與電視通訊（在區域網路內處理）</li>
+          <li><strong>您選擇的照片或影片</strong>：僅在投屏時涉及；透過區域網路傳輸，不會上傳到 Click Cast 伺服器儲存</li>
+          <li><strong>購買 / 訂閱狀態</strong>：與 Premium 權益相關（帳單由 Apple 處理；我們可能透過 Apple / 購買基礎設施如 RevenueCat 取得權益狀態以解鎖功能）</li>
+          <li><strong>診斷與崩潰資料</strong>：用於提升穩定性（例如透過崩潰上報服務）</li>
+          <li><strong>廣告識別碼 / 廣告互動資料</strong>：若向免費用戶展示廣告，可能由廣告 SDK 按其政策與平台規則處理</li>
+          <li><strong>您主動傳送的支援郵件</strong>：僅用於排查問題並回覆</li>
+        </ul>
+
+        <h3>資訊用途</h3>
+        <ul>
+          <li>提供遙控、投屏及相關功能</li>
+          <li>解鎖 Premium 功能並支援恢復購買</li>
+          <li>在啟用時向免費用戶展示廣告</li>
+          <li>分析崩潰並改善穩定性</li>
+          <li>回覆支援請求</li>
+        </ul>
+
+        <h3>資料共享</h3>
+        <p>我們不會出售您的個人資訊。為維持應用運作，有限資料可能由以下第三方處理：</p>
+        <ul>
+          <li>Apple（App Store 帳單、訂閱與平台服務）</li>
+          <li>購買權益基礎設施（例如 RevenueCat）</li>
+          <li>崩潰上報 / 分析服務</li>
+          <li>廣告服務（免費用戶且啟用廣告時）</li>
+        </ul>
+        <p>上述服務按其自身政策處理資料，且僅用於提供相應服務。</p>
+
+        <h3>權限說明</h3>
+        <ul>
+          <li><strong>本地網路</strong>：用於發現並控制同一 Wi-Fi 下的電視</li>
+          <li><strong>照片</strong>：僅在您選擇投屏媒體時請求</li>
+        </ul>
+
+        <h3>保留期限</h3>
+        <p>本地遙控與投屏流量留在您的網路內。我們或服務商保留的權益與診斷資料，僅在營運應用、履行法律義務或處理問題所需範圍內保存，並在可行時刪除或匿名化。</p>
+
+        <h3>您的選擇</h3>
+        <ul>
+          <li>您可拒絕可選權限；部分功能可能無法使用</li>
+          <li>您可在 App Store 帳戶設定中管理或取消訂閱</li>
+          <li>您可聯絡我們諮詢隱私相關問題</li>
+        </ul>
+
+        <h3>兒童</h3>
+        <p>本應用不面向 13 歲以下兒童（或以您所在地區的同等最低年齡為準）。我們不會故意收集兒童的個人資訊。</p>
+
+        <h3>政策變更</h3>
+        <p>我們可能不時更新本隱私政策，更新版本將發布於本頁面。</p>
+
+        <h3>聯絡我們</h3>
+        <p>隱私相關問題：<a href="mailto:jinshuihu.app@gmail.com">jinshuihu.app@gmail.com</a></p>
+        <p>使用條款：<a href="/click-cast-terms.html">click-cast-terms.html</a></p>
       </section>
     </div>
   </main>
+  <script>
+    const languageButtons = document.querySelectorAll("#language-switcher [data-lang]");
+    const panels = document.querySelectorAll("[data-panel]");
+    const hashLanguageMap = {
+      "#english": "en",
+      "#zh-hans": "zh-hans",
+      "#zh-hant": "zh-hant"
+    };
+
+    function resolveLanguage() {
+      const params = new URLSearchParams(window.location.search);
+      const queryLanguage = params.get("lang");
+      if (queryLanguage === "en" || queryLanguage === "zh-hans" || queryLanguage === "zh-hant") {
+        return queryLanguage;
+      }
+      return hashLanguageMap[window.location.hash] || "en";
+    }
+
+    function applyLanguage(language) {
+      languageButtons.forEach((button) => {
+        button.classList.toggle("active", button.dataset.lang === language);
+      });
+      panels.forEach((panel) => {
+        panel.classList.toggle("hidden", panel.dataset.panel !== language);
+      });
+      const url = new URL(window.location.href);
+      url.searchParams.set("lang", language);
+      url.hash = "";
+      window.history.replaceState({}, "", url);
+    }
+
+    languageButtons.forEach((button) => {
+      button.addEventListener("click", () => applyLanguage(button.dataset.lang));
+    });
+
+    applyLanguage(resolveLanguage());
+  </script>
 </body>
 </html>
