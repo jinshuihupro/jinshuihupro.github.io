@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="One Day Closer turns your retirement goal into a gentle daily progress on your iPhone." />
+  <title>One Day Closer | jinshuihu</title>
+  <link rel="stylesheet" href="/assets/site.css" />
+</head>
+<body>
+  <main>
+    <a class="back-link" href="/">← Back to developer website</a>
+
+    <section class="hero">
+      <span class="eyebrow">App Overview</span>
+      <h1>One Day Closer</h1>
+      <p id="hero-copy">One Day Closer turns your far-off retirement goal into a gentle daily progress on your home and lock screen. Instead of counting the days you have left, it shows how far you have already come. Choose your preferred language below.</p>
+      <div class="meta-row" id="language-switcher">
+        <button class="pill active" type="button" data-lang="en">English</button>
+        <button class="pill" type="button" data-lang="zh-hans">简体中文</button>
+        <button class="pill" type="button" data-lang="zh-hant">繁體中文</button>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 class="section-title" id="links-title">Public Links</h2>
+      <div class="links">
+        <a id="support-link" href="/one-day-closer-support.html?lang=en"><strong class="link-label">Support</strong><span>Open</span></a>
+        <a id="privacy-link" href="/one-day-closer-privacy.html?lang=en"><strong class="link-label">Privacy Policy</strong><span>Open</span></a>
+        <a id="terms-link" href="/one-day-closer-terms.html?lang=en"><strong class="link-label">Terms of Service</strong><span>Open</span></a>
+      </div>
+    </section>
+
+    <section class="notice">
+      Developer / Support contact:
+      <a href="mailto:jinshuihu.app@gmail.com">jinshuihu.app@gmail.com</a>.
+      Please include your device model, iOS version, the steps you tried, and screenshots if available.
+    </section>
+
+    <footer>© 2026 jinshuihu. One Day Closer.</footer>
+  </main>
+  <script>
+    const contentByLanguage = {
+      en: {
+        hero:
+          "One Day Closer turns your far-off retirement goal into a gentle daily progress on your home and lock screen. Instead of counting the days you have left, it shows how far you have already come. Choose your preferred language below.",
+        title: "Public Links",
+        support: { label: "Support", action: "Open", href: "/one-day-closer-support.html?lang=en" },
+        privacy: { label: "Privacy Policy", action: "Open", href: "/one-day-closer-privacy.html?lang=en" },
+        terms: { label: "Terms of Service", action: "Open", href: "/one-day-closer-terms.html?lang=en" }
+      },
+      "zh-hans": {
+        hero:
+          "又近一天把遥远的退休目标，变成桌面与锁屏上每天可见的进度。它不强调还剩多少天，而是让你看见自己已经走了多远。请选择下方语言。",
+        title: "公共链接",
+        support: { label: "支持", action: "打开", href: "/one-day-closer-support.html?lang=zh-hans" },
+        privacy: { label: "隐私政策", action: "打开", href: "/one-day-closer-privacy.html?lang=zh-hans" },
+        terms: { label: "服务条款", action: "打开", href: "/one-day-closer-terms.html?lang=zh-hans" }
+      },
+      "zh-hant": {
+        hero:
+          "又近一天把遙遠的退休目標，變成桌面與鎖定畫面上每天可見的進度。它不強調還剩多少天，而是讓你看見自己已經走了多遠。請選擇下方語言。",
+        title: "公共連結",
+        support: { label: "支援", action: "打開", href: "/one-day-closer-support.html?lang=zh-hant" },
+        privacy: { label: "隱私政策", action: "打開", href: "/one-day-closer-privacy.html?lang=zh-hant" },
+        terms: { label: "服務條款", action: "打開", href: "/one-day-closer-terms.html?lang=zh-hant" }
+      }
+    };
+
+    const heroCopy = document.getElementById("hero-copy");
+    const linksTitle = document.getElementById("links-title");
+    const supportLink = document.getElementById("support-link");
+    const privacyLink = document.getElementById("privacy-link");
+    const termsLink = document.getElementById("terms-link");
+    const languageButtons = document.querySelectorAll("#language-switcher [data-lang]");
+
+    function resolveLanguage() {
+      const params = new URLSearchParams(window.location.search);
+      const queryLanguage = params.get("lang");
+      if (contentByLanguage[queryLanguage]) {
+        return queryLanguage;
+      }
+      return "en";
+    }
+
+    function updateLink(link, data) {
+      link.href = data.href;
+      link.querySelector(".link-label").textContent = data.label;
+      link.querySelector("span").textContent = data.action;
+    }
+
+    function applyLanguage(language) {
+      const content = contentByLanguage[language];
+      heroCopy.textContent = content.hero;
+      linksTitle.textContent = content.title;
+      updateLink(supportLink, content.support);
+      updateLink(privacyLink, content.privacy);
+      updateLink(termsLink, content.terms);
+
+      languageButtons.forEach((button) => {
+        button.classList.toggle("active", button.dataset.lang === language);
+      });
+
+      const url = new URL(window.location.href);
+      url.searchParams.set("lang", language);
+      window.history.replaceState({}, "", url);
+    }
+
+    languageButtons.forEach((button) => {
+      button.addEventListener("click", () => applyLanguage(button.dataset.lang));
+    });
+
+    applyLanguage(resolveLanguage());
+  </script>
+</body>
+</html>
