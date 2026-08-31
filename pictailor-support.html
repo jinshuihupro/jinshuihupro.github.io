@@ -14,6 +14,9 @@
       <button class="pill active" type="button" data-lang="en">English</button>
       <button class="pill" type="button" data-lang="zh-hans">简体中文</button>
       <button class="pill" type="button" data-lang="zh-hant">繁體中文</button>
+      <button class="pill" type="button" data-lang="ja">日本語</button>
+      <button class="pill" type="button" data-lang="de">Deutsch</button>
+      <button class="pill" type="button" data-lang="ko">한국어</button>
     </div>
     <div class="legal tab-shell">
       <section class="tab-panel" data-panel="en">
@@ -52,6 +55,42 @@
           <li>問題描述，若方便也可附上相關畫面截圖</li>
         </ul>
       </section>
+      <section class="tab-panel hidden" data-panel="ja">
+        <h2>PicTailor サポート</h2>
+        <p>PicTailor に関するご質問がございましたら、メールにてお問い合わせください。</p>
+        <h3>お問い合わせ</h3>
+        <p>メール：<a href="mailto:jinshuihu.app@gmail.com">jinshuihu.app@gmail.com</a></p>
+        <h3>お問い合わせ時にご記載いただきたい内容</h3>
+        <ul>
+          <li>お使いの iPhone の機種と iOS のバージョン</li>
+          <li>ご利用中の機能（スクリーンショットの結合やウェブページのスナップショットなど）</li>
+          <li>問題の簡単な説明、および可能であれば関連するスクリーンショット</li>
+        </ul>
+      </section>
+      <section class="tab-panel hidden" data-panel="de">
+        <h2>PicTailor Support</h2>
+        <p>Wenn Sie Fragen zu PicTailor haben, kontaktieren Sie uns bitte per E-Mail.</p>
+        <h3>Kontakt</h3>
+        <p>E-Mail: <a href="mailto:jinshuihu.app@gmail.com">jinshuihu.app@gmail.com</a></p>
+        <h3>Hilfreiche Angaben</h3>
+        <ul>
+          <li>Ihr iPhone-Modell und Ihre iOS-Version</li>
+          <li>Die von Ihnen genutzte Funktion, z. B. Screenshot-Zusammenfügung oder Webseiten-Snapshot</li>
+          <li>Eine kurze Beschreibung des Problems und, falls möglich, Screenshots</li>
+        </ul>
+      </section>
+      <section class="tab-panel hidden" data-panel="ko">
+        <h2>PicTailor 지원</h2>
+        <p>PicTailor에 관한 문의 사항이 있으시면 이메일로 연락해 주세요.</p>
+        <h3>문의</h3>
+        <p>이메일: <a href="mailto:jinshuihu.app@gmail.com">jinshuihu.app@gmail.com</a></p>
+        <h3>문의 시 포함하면 좋은 정보</h3>
+        <ul>
+          <li>사용 중인 iPhone 모델 및 iOS 버전</li>
+          <li>사용 중이던 기능(예: 스크린샷 이어붙이기, 웹페이지 스냅샷)</li>
+          <li>문제에 대한 간단한 설명 및 가능한 경우 관련 스크린샷</li>
+        </ul>
+      </section>
     </div>
   </main>
   <script>
@@ -60,13 +99,16 @@
     const hashLanguageMap = {
       "#english": "en",
       "#zh-hans": "zh-hans",
-      "#zh-hant": "zh-hant"
+      "#zh-hant": "zh-hant",
+      "#ja": "ja",
+      "#de": "de",
+      "#ko": "ko"
     };
 
     function resolveLanguage() {
       const params = new URLSearchParams(window.location.search);
       const queryLanguage = params.get("lang");
-      if (queryLanguage === "en" || queryLanguage === "zh-hans" || queryLanguage === "zh-hant") {
+      if (queryLanguage === "en" || queryLanguage === "zh-hans" || queryLanguage === "zh-hant" || queryLanguage === "ja" || queryLanguage === "de" || queryLanguage === "ko") {
         return queryLanguage;
       }
       return hashLanguageMap[window.location.hash] || "en";

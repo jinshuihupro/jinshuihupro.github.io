@@ -19,6 +19,9 @@
         <button class="pill active" type="button" data-lang="en">English</button>
         <button class="pill" type="button" data-lang="zh-hans">简体中文</button>
         <button class="pill" type="button" data-lang="zh-hant">繁體中文</button>
+        <button class="pill" type="button" data-lang="ja">日本語</button>
+        <button class="pill" type="button" data-lang="de">Deutsch</button>
+        <button class="pill" type="button" data-lang="ko">한국어</button>
       </div>
     </section>
 
@@ -31,7 +34,7 @@
       </div>
     </section>
 
-    <section class="notice">
+    <section class="notice" id="contact-notice">
       Developer / Support contact:
       <a href="mailto:jinshuihu.app@gmail.com">jinshuihu.app@gmail.com</a>.
       Please include your device model, iOS version, the steps you tried, and screenshots if available.
@@ -40,35 +43,61 @@
     <footer>© 2026 jinshuihu. PicTailor.</footer>
   </main>
   <script>
+    const SUPPORTED_LANGUAGES = ["en", "zh-hans", "zh-hant", "ja", "de", "ko"];
     const contentByLanguage = {
       en: {
-        hero:
-          "PicTailor helps you stitch screenshots, crop long images, capture webpage snapshots, and export clean results from your iPhone. Choose your preferred language below.",
+        hero: "PicTailor helps you stitch screenshots, crop long images, capture webpage snapshots, and export clean results from your iPhone. Choose your preferred language below.",
         title: "Public Links",
+        contact: "Developer / Support contact: <a href=\"mailto:jinshuihu.app@gmail.com\">jinshuihu.app@gmail.com</a>. Please include your device model, iOS version, the steps you tried, and screenshots if available.",
         support: { label: "Support", action: "Open", href: "/pictailor-support.html?lang=en" },
         privacy: { label: "Privacy Policy", action: "Open", href: "/pictailor-privacy.html?lang=en" },
         terms: { label: "Terms of Service", action: "Open", href: "/pictailor-terms.html?lang=en" }
       },
       "zh-hans": {
-        hero:
-          "PicTailor 帮助你拼接截图、裁剪长图、捕获网页长截图，并在 iPhone 上导出清爽结果。请选择下方语言。",
+        hero: "PicTailor 帮助你拼接截图、裁剪长图、捕获网页长截图，并在 iPhone 上导出清爽结果。请选择下方语言。",
         title: "公共链接",
+        contact: "开发者 / 支持联系邮箱：<a href=\"mailto:jinshuihu.app@gmail.com\">jinshuihu.app@gmail.com</a>。请附上设备型号、iOS 版本、操作步骤，以及方便时的截图。",
         support: { label: "支持", action: "打开", href: "/pictailor-support.html?lang=zh-hans" },
         privacy: { label: "隐私政策", action: "打开", href: "/pictailor-privacy.html?lang=zh-hans" },
         terms: { label: "服务条款", action: "打开", href: "/pictailor-terms.html?lang=zh-hans" }
       },
       "zh-hant": {
-        hero:
-          "PicTailor 幫助你拼接截圖、裁剪長圖、擷取網頁長截圖，並在 iPhone 上匯出清爽結果。請選擇下方語言。",
+        hero: "PicTailor 幫助你拼接截圖、裁剪長圖、擷取網頁長截圖，並在 iPhone 上匯出清爽結果。請選擇下方語言。",
         title: "公共連結",
+        contact: "開發者 / 支援聯絡信箱：<a href=\"mailto:jinshuihu.app@gmail.com\">jinshuihu.app@gmail.com</a>。請附上裝置型號、iOS 版本、操作步驟，若方便也可附上截圖。",
         support: { label: "支援", action: "打開", href: "/pictailor-support.html?lang=zh-hant" },
         privacy: { label: "隱私政策", action: "打開", href: "/pictailor-privacy.html?lang=zh-hant" },
         terms: { label: "服務條款", action: "打開", href: "/pictailor-terms.html?lang=zh-hant" }
+      },
+      ja: {
+        hero: "PicTailor は、スクリーンショットの結合、長い画像の切り抜き、Webページのスナップショット撮影、きれいな書き出しを iPhone で行えます。下から言語を選んでください。",
+        title: "公開リンク",
+        contact: "開発者 / サポート連絡先：<a href=\"mailto:jinshuihu.app@gmail.com\">jinshuihu.app@gmail.com</a>。機種、iOS バージョン、操作手順、可能であればスクリーンショットを添えてください。",
+        support: { label: "サポート", action: "開く", href: "/pictailor-support.html?lang=ja" },
+        privacy: { label: "プライバシーポリシー", action: "開く", href: "/pictailor-privacy.html?lang=ja" },
+        terms: { label: "利用規約", action: "開く", href: "/pictailor-terms.html?lang=ja" }
+      },
+      de: {
+        hero: "Mit PicTailor fügst du Screenshots zusammen, schneidest lange Bilder zu, erfasst Webseiten-Snapshots und exportierst saubere Ergebnisse von deinem iPhone. Wähle unten deine Sprache.",
+        title: "Öffentliche Links",
+        contact: "Entwickler / Support-Kontakt: <a href=\"mailto:jinshuihu.app@gmail.com\">jinshuihu.app@gmail.com</a>. Bitte Gerätemodell, iOS-Version, Schritte und Screenshots angeben, falls möglich.",
+        support: { label: "Support", action: "Öffnen", href: "/pictailor-support.html?lang=de" },
+        privacy: { label: "Datenschutz", action: "Öffnen", href: "/pictailor-privacy.html?lang=de" },
+        terms: { label: "Nutzungsbedingungen", action: "Öffnen", href: "/pictailor-terms.html?lang=de" }
+      },
+      ko: {
+        hero: "PicTailor로 스크린샷을 이어붙이고, 긴 이미지를 자르고, 웹페이지 스냅샷을 캡처해 iPhone에서 깔끔하게보낼 수 있습니다. 아래에서 언어를 선택하세요.",
+        title: "공개 링크",
+        contact: "개발자 / 지원 연락처: <a href=\"mailto:jinshuihu.app@gmail.com\">jinshuihu.app@gmail.com</a>. 기기 모델, iOS 버전, 시도한 단계, 가능하면 스크린샷을 함께 보내 주세요.",
+        support: { label: "지원", action: "열기", href: "/pictailor-support.html?lang=ko" },
+        privacy: { label: "개인정보 처리방침", action: "열기", href: "/pictailor-privacy.html?lang=ko" },
+        terms: { label: "이용 약관", action: "열기", href: "/pictailor-terms.html?lang=ko" }
       }
     };
 
     const heroCopy = document.getElementById("hero-copy");
     const linksTitle = document.getElementById("links-title");
+    const contactNotice = document.getElementById("contact-notice");
     const supportLink = document.getElementById("support-link");
     const privacyLink = document.getElementById("privacy-link");
     const termsLink = document.getElementById("terms-link");
@@ -77,7 +106,7 @@
     function resolveLanguage() {
       const params = new URLSearchParams(window.location.search);
       const queryLanguage = params.get("lang");
-      if (contentByLanguage[queryLanguage]) {
+      if (SUPPORTED_LANGUAGES.includes(queryLanguage)) {
         return queryLanguage;
       }
       return "en";
@@ -93,6 +122,7 @@
       const content = contentByLanguage[language];
       heroCopy.textContent = content.hero;
       linksTitle.textContent = content.title;
+      contactNotice.innerHTML = content.contact;
       updateLink(supportLink, content.support);
       updateLink(privacyLink, content.privacy);
       updateLink(termsLink, content.terms);
