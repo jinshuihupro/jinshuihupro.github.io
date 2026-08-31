@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Click Cast is an iPhone smart TV remote app by jinshuihu." />
+  <meta name="description" content="Click Cast is an iPhone remote for Sony and LG compatible smart TVs on the same Wi-Fi network." />
   <title>Click Cast | jinshuihu</title>
   <link rel="stylesheet" href="/assets/site.css" />
 </head>
@@ -14,30 +14,124 @@
     <section class="hero">
       <span class="eyebrow">App Overview</span>
       <h1>Click Cast</h1>
-      <p>Click Cast turns your iPhone into a practical smart TV remote. Pair with compatible TVs on the same Wi-Fi network and control common navigation, playback, and power actions in one place.</p>
-      <div class="meta-row">
-        <span class="pill">iPhone App</span>
-        <span class="pill">Remote Control</span>
-        <span class="pill">Same Wi-Fi Pairing</span>
+      <p id="hero-copy">Click Cast turns your iPhone into a remote for Sony and LG compatible smart TVs on the same Wi-Fi network. Discover TVs automatically, pair once, and control navigation, playback, volume, and power. Choose your preferred language below.</p>
+      <div class="meta-row" id="language-switcher">
+        <button class="pill active" type="button" data-lang="en">English</button>
+        <button class="pill" type="button" data-lang="zh-hans">简体中文</button>
+        <button class="pill" type="button" data-lang="zh-hant">繁體中文</button>
+        <button class="pill" type="button" data-lang="ja">日本語</button>
+        <button class="pill" type="button" data-lang="de">Deutsch</button>
       </div>
     </section>
 
     <section class="card">
-      <h2 class="section-title">Public Links</h2>
+      <h2 class="section-title" id="links-title">Public Links</h2>
       <div class="links">
-        <a href="/click-cast-support.html">Support <span>Open</span></a>
-        <a href="/click-cast-privacy.html">Privacy Policy <span>Open</span></a>
-        <a href="/click-cast-terms.html">Terms of Use <span>Open</span></a>
+        <a id="support-link" href="/click-cast-support.html?lang=en"><strong class="link-label">Support</strong><span>Open</span></a>
+        <a id="privacy-link" href="/click-cast-privacy.html?lang=en"><strong class="link-label">Privacy Policy</strong><span>Open</span></a>
+        <a id="terms-link" href="/click-cast-terms.html?lang=en"><strong class="link-label">Terms of Use</strong><span>Open</span></a>
       </div>
     </section>
 
-    <section class="notice">
-      Support email:
+    <section class="notice" id="contact-notice">
+      Developer / Support contact:
       <a href="mailto:jinshuihu.app@gmail.com">jinshuihu.app@gmail.com</a>.
       Please include your device model, iOS version, TV brand/model, and a short description of the issue.
     </section>
 
     <footer>© 2026 jinshuihu. Click Cast.</footer>
   </main>
+  <script>
+    const SUPPORTED_LANGUAGES = ["en", "zh-hans", "zh-hant", "ja", "de"];
+    const contentByLanguage = {
+      en: {
+        hero: "Click Cast turns your iPhone into a remote for Sony and LG compatible smart TVs on the same Wi-Fi network. Discover TVs automatically, pair once, and control navigation, playback, volume, and power. Choose your preferred language below.",
+        title: "Public Links",
+        contact: "Developer / Support contact: <a href=\"mailto:jinshuihu.app@gmail.com\">jinshuihu.app@gmail.com</a>. Please include your device model, iOS version, TV brand/model, and a short description of the issue.",
+        support: { label: "Support", action: "Open", href: "/click-cast-support.html?lang=en" },
+        privacy: { label: "Privacy Policy", action: "Open", href: "/click-cast-privacy.html?lang=en" },
+        terms: { label: "Terms of Use", action: "Open", href: "/click-cast-terms.html?lang=en" }
+      },
+      "zh-hans": {
+        hero: "Click Cast 可将 iPhone 变为同一 Wi-Fi 下兼容 Sony 与 LG 智能电视的遥控器。自动发现电视、一次配对后即可控制导航、播放、音量与电源。请选择下方语言。",
+        title: "公共链接",
+        contact: "开发者 / 支持联系邮箱：<a href=\"mailto:jinshuihu.app@gmail.com\">jinshuihu.app@gmail.com</a>。请附上设备型号、iOS 版本、电视品牌/型号，以及问题的简要说明。",
+        support: { label: "支持", action: "打开", href: "/click-cast-support.html?lang=zh-hans" },
+        privacy: { label: "隐私政策", action: "打开", href: "/click-cast-privacy.html?lang=zh-hans" },
+        terms: { label: "使用条款", action: "打开", href: "/click-cast-terms.html?lang=zh-hans" }
+      },
+      "zh-hant": {
+        hero: "Click Cast 可將 iPhone 變為同一 Wi-Fi 下相容 Sony 與 LG 智慧電視的遙控器。自動發現電視、一次配對後即可控制導航、播放、音量與電源。請選擇下方語言。",
+        title: "公共連結",
+        contact: "開發者 / 支援聯絡信箱：<a href=\"mailto:jinshuihu.app@gmail.com\">jinshuihu.app@gmail.com</a>。請附上裝置型號、iOS 版本、電視品牌/型號，以及問題的簡要說明。",
+        support: { label: "支援", action: "打開", href: "/click-cast-support.html?lang=zh-hant" },
+        privacy: { label: "隱私政策", action: "打開", href: "/click-cast-privacy.html?lang=zh-hant" },
+        terms: { label: "使用條款", action: "打開", href: "/click-cast-terms.html?lang=zh-hant" }
+      },
+      ja: {
+        hero: "Click Cast は、同一 Wi-Fi 上の Sony および LG 対応スマート TV 向け iPhone リモコンです。TV を自動検出し、一度ペアリングすれば、ナビゲーション、再生、音量、電源を操作できます。下から言語を選んでください。",
+        title: "公開リンク",
+        contact: "開発者 / サポート連絡先：<a href=\"mailto:jinshuihu.app@gmail.com\">jinshuihu.app@gmail.com</a>。機種、iOS バージョン、TV のブランド/型番、問題の概要を添えてください。",
+        support: { label: "サポート", action: "開く", href: "/click-cast-support.html?lang=ja" },
+        privacy: { label: "プライバシーポリシー", action: "開く", href: "/click-cast-privacy.html?lang=ja" },
+        terms: { label: "利用規約", action: "開く", href: "/click-cast-terms.html?lang=ja" }
+      },
+      de: {
+        hero: "Click Cast macht aus deinem iPhone eine Fernbedienung für Sony- und LG-kompatible Smart-TVs im selben Wi-Fi. TVs werden automatisch gefunden, einmal gekoppelt, und du steuerst Navigation, Wiedergabe, Lautstärke und Ein/Aus. Wähle unten deine Sprache.",
+        title: "Öffentliche Links",
+        contact: "Entwickler / Support-Kontakt: <a href=\"mailto:jinshuihu.app@gmail.com\">jinshuihu.app@gmail.com</a>. Bitte Gerätemodell, iOS-Version, TV-Marke/Modell und eine kurze Problembeschreibung angeben.",
+        support: { label: "Support", action: "Öffnen", href: "/click-cast-support.html?lang=de" },
+        privacy: { label: "Datenschutz", action: "Öffnen", href: "/click-cast-privacy.html?lang=de" },
+        terms: { label: "Nutzungsbedingungen", action: "Öffnen", href: "/click-cast-terms.html?lang=de" }
+      }
+    };
+
+    const heroCopy = document.getElementById("hero-copy");
+    const linksTitle = document.getElementById("links-title");
+    const contactNotice = document.getElementById("contact-notice");
+    const supportLink = document.getElementById("support-link");
+    const privacyLink = document.getElementById("privacy-link");
+    const termsLink = document.getElementById("terms-link");
+    const languageButtons = document.querySelectorAll("#language-switcher [data-lang]");
+
+    function resolveLanguage() {
+      const params = new URLSearchParams(window.location.search);
+      const queryLanguage = params.get("lang");
+      if (SUPPORTED_LANGUAGES.includes(queryLanguage)) {
+        return queryLanguage;
+      }
+      return "en";
+    }
+
+    function updateLink(link, data) {
+      link.href = data.href;
+      link.querySelector(".link-label").textContent = data.label;
+      link.querySelector("span").textContent = data.action;
+    }
+
+    function applyLanguage(language) {
+      const content = contentByLanguage[language];
+      heroCopy.textContent = content.hero;
+      linksTitle.textContent = content.title;
+      contactNotice.innerHTML = content.contact;
+      updateLink(supportLink, content.support);
+      updateLink(privacyLink, content.privacy);
+      updateLink(termsLink, content.terms);
+
+      languageButtons.forEach((button) => {
+        button.classList.toggle("active", button.dataset.lang === language);
+      });
+
+      const url = new URL(window.location.href);
+      url.searchParams.set("lang", language);
+      window.history.replaceState({}, "", url);
+    }
+
+    languageButtons.forEach((button) => {
+      button.addEventListener("click", () => applyLanguage(button.dataset.lang));
+    });
+
+    applyLanguage(resolveLanguage());
+  </script>
 </body>
 </html>
