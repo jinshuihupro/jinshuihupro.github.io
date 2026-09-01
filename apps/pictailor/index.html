@@ -22,6 +22,7 @@
         <button class="pill" type="button" data-lang="ja">日本語</button>
         <button class="pill" type="button" data-lang="de">Deutsch</button>
         <button class="pill" type="button" data-lang="ko">한국어</button>
+        <button class="pill" type="button" data-lang="fr">Français</button>
       </div>
     </section>
 
@@ -43,7 +44,7 @@
     <footer>© 2026 jinshuihu. PicTailor.</footer>
   </main>
   <script>
-    const SUPPORTED_LANGUAGES = ["en", "zh-hans", "zh-hant", "ja", "de", "ko"];
+    const SUPPORTED_LANGUAGES = ["en", "zh-hans", "zh-hant", "ja", "de", "ko", "fr"];
     const contentByLanguage = {
       en: {
         hero: "PicTailor helps you stitch screenshots, crop long images, capture webpage snapshots, and export clean results from your iPhone. Choose your preferred language below.",
@@ -92,6 +93,14 @@
         support: { label: "지원", action: "열기", href: "/pictailor-support.html?lang=ko" },
         privacy: { label: "개인정보 처리방침", action: "열기", href: "/pictailor-privacy.html?lang=ko" },
         terms: { label: "이용 약관", action: "열기", href: "/pictailor-terms.html?lang=ko" }
+      },
+      fr: {
+        hero: "PicTailor vous aide à assembler des captures d’écran, rogner des images longues, capturer des pages web et exporter des résultats nets depuis votre iPhone. Choisissez votre langue ci-dessous.",
+        title: "Liens publics",
+        contact: "Contact développeur / assistance : <a href=\"mailto:jinshuihu.app@gmail.com\">jinshuihu.app@gmail.com</a>. Indiquez le modèle de votre appareil, la version d’iOS, les étapes effectuées et, si possible, des captures d’écran.",
+        support: { label: "Assistance", action: "Ouvrir", href: "/pictailor-support.html?lang=fr" },
+        privacy: { label: "Politique de confidentialité", action: "Ouvrir", href: "/pictailor-privacy.html?lang=fr" },
+        terms: { label: "Conditions d’utilisation", action: "Ouvrir", href: "/pictailor-terms.html?lang=fr" }
       }
     };
 

@@ -17,6 +17,7 @@
       <button class="pill" type="button" data-lang="ja">日本語</button>
       <button class="pill" type="button" data-lang="de">Deutsch</button>
       <button class="pill" type="button" data-lang="ko">한국어</button>
+      <button class="pill" type="button" data-lang="fr">Français</button>
     </div>
     <div class="legal tab-shell">
       <section class="tab-panel" data-panel="en">
@@ -109,6 +110,18 @@
         <h3>문의</h3>
         <p>본 약관에 관한 문의는 <a href="mailto:jinshuihu.app@gmail.com">jinshuihu.app@gmail.com</a>으로 보내 주세요.</p>
       </section>
+      <section class="tab-panel hidden" data-panel="fr">
+        <h2>Conditions d’utilisation</h2>
+        <p>En utilisant PicTailor, vous acceptez d’utiliser l’app uniquement à des fins légales et seulement avec les contenus et pages web que vous êtes autorisé à traiter.</p>
+        <h3>Portée du service</h3>
+        <p>PicTailor est fourni en l’état. La disponibilité des fonctions peut varier selon la version d’iOS, le comportement des pages web, les performances de l’appareil et les autorisations de partage système.</p>
+        <h3>Utilisation acceptable</h3>
+        <ul><li>Utilisez l’app uniquement avec vos propres images ou des contenus que vous êtes autorisé à modifier, capturer ou partager</li><li>N’utilisez pas l’app d’une manière qui enfreint la propriété intellectuelle, la vie privée ou les lois applicables</li></ul>
+        <h3>Limitation de responsabilité</h3>
+        <p>Dans la mesure maximale permise par la loi, jinshuihu n’est pas responsable des dommages indirects, accessoires ou consécutifs découlant de votre utilisation de PicTailor.</p>
+        <h3>Contact</h3>
+        <p>Les questions sur ces conditions peuvent être envoyées à <a href="mailto:jinshuihu.app@gmail.com">jinshuihu.app@gmail.com</a>.</p>
+      </section>
     </div>
   </main>
   <script>
@@ -120,13 +133,14 @@
       "#zh-hant": "zh-hant",
       "#ja": "ja",
       "#de": "de",
-      "#ko": "ko"
+      "#ko": "ko",
+      "#fr": "fr"
     };
 
     function resolveLanguage() {
       const params = new URLSearchParams(window.location.search);
       const queryLanguage = params.get("lang");
-      if (queryLanguage === "en" || queryLanguage === "zh-hans" || queryLanguage === "zh-hant" || queryLanguage === "ja" || queryLanguage === "de" || queryLanguage === "ko") {
+      if (queryLanguage === "en" || queryLanguage === "zh-hans" || queryLanguage === "zh-hant" || queryLanguage === "ja" || queryLanguage === "de" || queryLanguage === "ko" || queryLanguage === "fr") {
         return queryLanguage;
       }
       return hashLanguageMap[window.location.hash] || "en";

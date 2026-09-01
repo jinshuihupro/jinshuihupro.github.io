@@ -17,6 +17,7 @@
       <button class="pill" type="button" data-lang="ja">日本語</button>
       <button class="pill" type="button" data-lang="de">Deutsch</button>
       <button class="pill" type="button" data-lang="ko">한국어</button>
+      <button class="pill" type="button" data-lang="fr">Français</button>
     </div>
     <div class="legal tab-shell">
       <section class="tab-panel" data-panel="en">
@@ -91,6 +92,18 @@
           <li>문제에 대한 간단한 설명 및 가능한 경우 관련 스크린샷</li>
         </ul>
       </section>
+      <section class="tab-panel hidden" data-panel="fr">
+        <h2>Assistance PicTailor</h2>
+        <p>Si vous avez des questions sur PicTailor, contactez-nous par e-mail.</p>
+        <h3>Contact</h3>
+        <p>E-mail : <a href="mailto:jinshuihu.app@gmail.com">jinshuihu.app@gmail.com</a></p>
+        <h3>Informations utiles à inclure</h3>
+        <ul>
+          <li>Le modèle de votre iPhone et votre version d’iOS</li>
+          <li>La fonction utilisée, par exemple l’assemblage de captures ou la capture de page web</li>
+          <li>Une brève description du problème et, si possible, des captures d’écran</li>
+        </ul>
+      </section>
     </div>
   </main>
   <script>
@@ -102,13 +115,14 @@
       "#zh-hant": "zh-hant",
       "#ja": "ja",
       "#de": "de",
-      "#ko": "ko"
+      "#ko": "ko",
+      "#fr": "fr"
     };
 
     function resolveLanguage() {
       const params = new URLSearchParams(window.location.search);
       const queryLanguage = params.get("lang");
-      if (queryLanguage === "en" || queryLanguage === "zh-hans" || queryLanguage === "zh-hant" || queryLanguage === "ja" || queryLanguage === "de" || queryLanguage === "ko") {
+      if (queryLanguage === "en" || queryLanguage === "zh-hans" || queryLanguage === "zh-hant" || queryLanguage === "ja" || queryLanguage === "de" || queryLanguage === "ko" || queryLanguage === "fr") {
         return queryLanguage;
       }
       return hashLanguageMap[window.location.hash] || "en";

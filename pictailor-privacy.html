@@ -17,6 +17,7 @@
       <button class="pill" type="button" data-lang="ja">日本語</button>
       <button class="pill" type="button" data-lang="de">Deutsch</button>
       <button class="pill" type="button" data-lang="ko">한국어</button>
+      <button class="pill" type="button" data-lang="fr">Français</button>
     </div>
     <div class="legal tab-shell">
       <section class="tab-panel" data-panel="en">
@@ -157,6 +158,20 @@
         <h3>문의</h3>
         <p>개인정보 관련 문의는 <a href="mailto:jinshuihu.app@gmail.com">jinshuihu.app@gmail.com</a>으로 연락해 주세요.</p>
       </section>
+      <section class="tab-panel hidden" data-panel="fr">
+        <h2>Politique de confidentialité</h2>
+        <p>PicTailor est fourni par jinshuihu.</p>
+        <h3>Fonctionnement de l’app</h3>
+        <p>PicTailor vous permet de sélectionner des images, d’assembler des captures d’écran, de capturer des pages web, de modifier les résultats et de les exporter vers votre appareil ou les destinations de partage système choisies.</p>
+        <h3>Informations que nous traitons</h3>
+        <ul><li>Les photos et captures d’écran que vous sélectionnez dans l’app</li><li>Le contenu des pages web lorsque vous utilisez la capture web ou l’extension de partage Safari</li><li>Les URL du presse-papiers lorsqu’un lien de page web valide est disponible au retour à l’écran principal</li><li>Les données de diagnostic et de plantage utilisées pour améliorer la stabilité</li></ul>
+        <h3>Utilisation des informations</h3>
+        <ul><li>Pour générer localement sur votre appareil des images assemblées et des captures de pages web</li><li>Pour enregistrer les images exportées dans votre photothèque ou les partager vers les destinations de votre choix</li><li>Pour analyser les plantages et améliorer la fiabilité</li></ul>
+        <h3>Partage des données</h3>
+        <p>Nous ne vendons pas vos informations personnelles. Les fournisseurs de rapports de plantage ou d’infrastructure ne sont utilisés que pour le fonctionnement et le diagnostic de l’app.</p>
+        <h3>Contact</h3>
+        <p>Pour toute question sur la confidentialité, contactez <a href="mailto:jinshuihu.app@gmail.com">jinshuihu.app@gmail.com</a>.</p>
+      </section>
     </div>
   </main>
   <script>
@@ -168,13 +183,14 @@
       "#zh-hant": "zh-hant",
       "#ja": "ja",
       "#de": "de",
-      "#ko": "ko"
+      "#ko": "ko",
+      "#fr": "fr"
     };
 
     function resolveLanguage() {
       const params = new URLSearchParams(window.location.search);
       const queryLanguage = params.get("lang");
-      if (queryLanguage === "en" || queryLanguage === "zh-hans" || queryLanguage === "zh-hant" || queryLanguage === "ja" || queryLanguage === "de" || queryLanguage === "ko") {
+      if (queryLanguage === "en" || queryLanguage === "zh-hans" || queryLanguage === "zh-hant" || queryLanguage === "ja" || queryLanguage === "de" || queryLanguage === "ko" || queryLanguage === "fr") {
         return queryLanguage;
       }
       return hashLanguageMap[window.location.hash] || "en";
