@@ -16,6 +16,8 @@
       <button class="pill" type="button" data-lang="zh-hant">繁體中文</button>
       <button class="pill" type="button" data-lang="ja">日本語</button>
       <button class="pill" type="button" data-lang="de">Deutsch</button>
+      <button class="pill" type="button" data-lang="fr">Français</button>
+      <button class="pill" type="button" data-lang="it">Italiano</button>
     </div>
     <div class="legal tab-shell">
       <section class="tab-panel" data-panel="en">
@@ -88,6 +90,34 @@
           <li>Eine kurze Problembeschreibung und, falls möglich, Screenshots</li>
         </ul>
       </section>
+      <section class="tab-panel hidden" data-panel="fr">
+        <h2>Assistance Click Cast</h2>
+        <p>Si vous avez besoin d’aide pour utiliser Click Cast avec votre téléviseur Sony ou LG compatible, contactez-nous par e-mail.</p>
+        <h3>Contact</h3>
+        <p>E-mail : <a href="mailto:jinshuihu.app@gmail.com">jinshuihu.app@gmail.com</a></p>
+        <h3>Informations utiles à nous transmettre</h3>
+        <ul>
+          <li>Le modèle de votre iPhone et la version d’iOS</li>
+          <li>La marque et le modèle de votre téléviseur (Sony ou LG)</li>
+          <li>Si votre iPhone et votre téléviseur sont sur le même réseau Wi-Fi</li>
+          <li>Si vous essayez d’appairer, d’utiliser la télécommande, de diffuser un média ou d’utiliser les fonctionnalités Premium</li>
+          <li>Une brève description du problème, avec des captures d’écran si possible</li>
+        </ul>
+      </section>
+      <section class="tab-panel hidden" data-panel="it">
+        <h2>Assistenza Click Cast</h2>
+        <p>Se hai bisogno di aiuto per utilizzare Click Cast con la tua TV Sony o LG compatibile, contattaci via email.</p>
+        <h3>Contatti</h3>
+        <p>Email: <a href="mailto:jinshuihu.app@gmail.com">jinshuihu.app@gmail.com</a></p>
+        <h3>Dettagli utili da includere</h3>
+        <ul>
+          <li>Il modello del tuo iPhone e la versione di iOS</li>
+          <li>La marca e il modello della tua TV (Sony o LG)</li>
+          <li>Se iPhone e TV sono sulla stessa rete Wi-Fi</li>
+          <li>Se stai provando ad associare, usare il telecomando, trasmettere contenuti o usare le funzioni Premium</li>
+          <li>Una breve descrizione del problema e screenshot, se disponibili</li>
+        </ul>
+      </section>
     </div>
   </main>
   <script>
@@ -98,13 +128,16 @@
       "#zh-hans": "zh-hans",
       "#zh-hant": "zh-hant",
       "#ja": "ja",
-      "#de": "de"
+      "#de": "de",
+      "#fr": "fr",
+      "#it": "it"
     };
 
     function resolveLanguage() {
       const params = new URLSearchParams(window.location.search);
       const queryLanguage = params.get("lang");
-      if (queryLanguage === "en" || queryLanguage === "zh-hans" || queryLanguage === "zh-hant" || queryLanguage === "ja" || queryLanguage === "de") {
+      const supported = ["en", "zh-hans", "zh-hant", "ja", "de", "fr", "it"];
+      if (supported.includes(queryLanguage)) {
         return queryLanguage;
       }
       return hashLanguageMap[window.location.hash] || "en";
