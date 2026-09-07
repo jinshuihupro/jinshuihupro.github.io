@@ -21,6 +21,8 @@
         <button class="pill" type="button" data-lang="zh-hant">繁體中文</button>
         <button class="pill" type="button" data-lang="ja">日本語</button>
         <button class="pill" type="button" data-lang="de">Deutsch</button>
+        <button class="pill" type="button" data-lang="fr">Français</button>
+        <button class="pill" type="button" data-lang="it">Italiano</button>
       </div>
     </section>
 
@@ -42,7 +44,7 @@
     <footer>© 2026 jinshuihu. Click Cast.</footer>
   </main>
   <script>
-    const SUPPORTED_LANGUAGES = ["en", "zh-hans", "zh-hant", "ja", "de"];
+    const SUPPORTED_LANGUAGES = ["en", "zh-hans", "zh-hant", "ja", "de", "fr", "it"];
     const contentByLanguage = {
       en: {
         hero: "Click Cast turns your iPhone into a remote for Sony and LG compatible smart TVs on the same Wi-Fi network. Discover TVs automatically, pair once, and control navigation, playback, volume, and power. Choose your preferred language below.",
@@ -75,6 +77,22 @@
         support: { label: "サポート", action: "開く", href: "/click-cast-support.html?lang=ja" },
         privacy: { label: "プライバシーポリシー", action: "開く", href: "/click-cast-privacy.html?lang=ja" },
         terms: { label: "利用規約", action: "開く", href: "/click-cast-terms.html?lang=ja" }
+      },
+      fr: {
+        hero: "Click Cast transforme votre iPhone en télécommande pour les TV Sony BRAVIA et LG webOS compatibles sur le même réseau Wi-Fi. Détectez et associez votre téléviseur, puis contrôlez la navigation, la lecture, le volume et l’alimentation. Les fonctions varient selon le modèle. Choisissez votre langue ci-dessous.",
+        title: "Liens utiles",
+        contact: "Assistance / développeur : <a href=\"mailto:jinshuihu.app@gmail.com\">jinshuihu.app@gmail.com</a>. Indiquez le modèle de votre appareil, la version d’iOS, la marque et le modèle du téléviseur, ainsi qu’une brève description du problème.",
+        support: { label: "Assistance", action: "Ouvrir", href: "/click-cast-support.html?lang=fr" },
+        privacy: { label: "Confidentialité", action: "Ouvrir", href: "/click-cast-privacy.html?lang=fr" },
+        terms: { label: "Conditions d’utilisation", action: "Ouvrir", href: "/click-cast-terms.html?lang=fr" }
+      },
+      it: {
+        hero: "Click Cast trasforma il tuo iPhone in un telecomando per le TV Sony BRAVIA e LG webOS compatibili sulla stessa rete Wi-Fi. Trova e abbina il televisore, poi controlla navigazione, riproduzione, volume e accensione. Le funzioni variano in base al modello. Scegli la lingua qui sotto.",
+        title: "Link utili",
+        contact: "Sviluppatore / assistenza: <a href=\"mailto:jinshuihu.app@gmail.com\">jinshuihu.app@gmail.com</a>. Indica il modello del dispositivo, la versione di iOS, la marca e il modello della TV e una breve descrizione del problema.",
+        support: { label: "Assistenza", action: "Apri", href: "/click-cast-support.html?lang=it" },
+        privacy: { label: "Privacy", action: "Apri", href: "/click-cast-privacy.html?lang=it" },
+        terms: { label: "Condizioni d’uso", action: "Apri", href: "/click-cast-terms.html?lang=it" }
       },
       de: {
         hero: "Click Cast macht aus deinem iPhone eine Fernbedienung für Sony- und LG-kompatible Smart-TVs im selben Wi-Fi. TVs werden automatisch gefunden, einmal gekoppelt, und du steuerst Navigation, Wiedergabe, Lautstärke und Ein/Aus. Wähle unten deine Sprache.",
