@@ -23,6 +23,8 @@
         <button class="pill" type="button" data-lang="de">Deutsch</button>
         <button class="pill" type="button" data-lang="ko">한국어</button>
         <button class="pill" type="button" data-lang="fr">Français</button>
+        <button class="pill" type="button" data-lang="pt-BR">Português (Brasil)</button>
+        <button class="pill" type="button" data-lang="es">Español</button>
       </div>
     </section>
 
@@ -44,7 +46,7 @@
     <footer>© 2026 jinshuihu. PicTailor.</footer>
   </main>
   <script>
-    const SUPPORTED_LANGUAGES = ["en", "zh-hans", "zh-hant", "ja", "de", "ko", "fr"];
+    const SUPPORTED_LANGUAGES = ["en", "zh-hans", "zh-hant", "ja", "de", "ko", "fr", "pt-BR", "es"];
     const contentByLanguage = {
       en: {
         hero: "PicTailor helps you stitch screenshots, crop long images, capture webpage snapshots, and export clean results from your iPhone. Choose your preferred language below.",
@@ -101,6 +103,22 @@
         support: { label: "Assistance", action: "Ouvrir", href: "/pictailor-support.html?lang=fr" },
         privacy: { label: "Politique de confidentialité", action: "Ouvrir", href: "/pictailor-privacy.html?lang=fr" },
         terms: { label: "Conditions d’utilisation", action: "Ouvrir", href: "/pictailor-terms.html?lang=fr" }
+      },
+      "pt-BR": {
+        hero: "O PicTailor ajuda você a unir capturas de tela, cortar imagens longas, capturar páginas web e exportar resultados nítidos no iPhone. Escolha seu idioma abaixo.",
+        title: "Links públicos",
+        contact: "Contato do desenvolvedor / suporte: <a href=\"mailto:jinshuihu.app@gmail.com\">jinshuihu.app@gmail.com</a>. Inclua o modelo do aparelho, a versão do iOS, as etapas realizadas e, se possível, capturas de tela.",
+        support: { label: "Suporte", action: "Abrir", href: "/pictailor-support.html?lang=pt-BR" },
+        privacy: { label: "Política de privacidade", action: "Abrir", href: "/pictailor-privacy.html?lang=pt-BR" },
+        terms: { label: "Termos de serviço", action: "Abrir", href: "/pictailor-terms.html?lang=pt-BR" }
+      },
+      es: {
+        hero: "PicTailor te ayuda a unir capturas de pantalla, recortar imágenes largas, capturar páginas web y exportar resultados limpios desde tu iPhone. Elige tu idioma a continuación.",
+        title: "Enlaces públicos",
+        contact: "Contacto de desarrollo / soporte: <a href=\"mailto:jinshuihu.app@gmail.com\">jinshuihu.app@gmail.com</a>. Incluye el modelo de tu dispositivo, la versión de iOS, los pasos realizados y, si es posible, capturas de pantalla.",
+        support: { label: "Soporte", action: "Abrir", href: "/pictailor-support.html?lang=es" },
+        privacy: { label: "Política de privacidad", action: "Abrir", href: "/pictailor-privacy.html?lang=es" },
+        terms: { label: "Términos de servicio", action: "Abrir", href: "/pictailor-terms.html?lang=es" }
       }
     };
 

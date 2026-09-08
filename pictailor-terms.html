@@ -18,6 +18,8 @@
       <button class="pill" type="button" data-lang="de">Deutsch</button>
       <button class="pill" type="button" data-lang="ko">한국어</button>
       <button class="pill" type="button" data-lang="fr">Français</button>
+      <button class="pill" type="button" data-lang="pt-BR">Português (Brasil)</button>
+      <button class="pill" type="button" data-lang="es">Español</button>
     </div>
     <div class="legal tab-shell">
       <section class="tab-panel" data-panel="en">
@@ -122,6 +124,30 @@
         <h3>Contact</h3>
         <p>Les questions sur ces conditions peuvent être envoyées à <a href="mailto:jinshuihu.app@gmail.com">jinshuihu.app@gmail.com</a>.</p>
       </section>
+      <section class="tab-panel hidden" data-panel="pt-BR">
+        <h2>Termos de serviço</h2>
+        <p>Ao usar o PicTailor, você concorda em usar o app somente para fins legais e apenas com conteúdos e páginas web que tem autorização para processar.</p>
+        <h3>Escopo do serviço</h3>
+        <p>O PicTailor é fornecido como está. A disponibilidade dos recursos pode variar conforme a versão do iOS, o comportamento da página web, o desempenho do aparelho e as permissões de compartilhamento do sistema.</p>
+        <h3>Uso aceitável</h3>
+        <ul><li>Use o app apenas com suas próprias imagens ou conteúdos que tem permissão para editar, capturar ou compartilhar</li><li>Não use o app de modo que viole propriedade intelectual, privacidade ou outras leis aplicáveis</li></ul>
+        <h3>Limitação de responsabilidade</h3>
+        <p>Na extensão máxima permitida por lei, jinshuihu não se responsabiliza por danos indiretos, incidentais ou consequentes decorrentes do uso do PicTailor.</p>
+        <h3>Contato</h3>
+        <p>Dúvidas sobre estes termos podem ser enviadas para <a href="mailto:jinshuihu.app@gmail.com">jinshuihu.app@gmail.com</a>.</p>
+      </section>
+      <section class="tab-panel hidden" data-panel="es">
+        <h2>Términos de servicio</h2>
+        <p>Al utilizar PicTailor, aceptas usar la app únicamente con fines lícitos y solo con contenido y páginas web que estés autorizado a procesar.</p>
+        <h3>Alcance del servicio</h3>
+        <p>PicTailor se proporciona tal cual. La disponibilidad de las funciones puede variar según la versión de iOS, el comportamiento de las páginas web, el rendimiento del dispositivo y los permisos de compartir del sistema.</p>
+        <h3>Uso aceptable</h3>
+        <ul><li>Usa la app solo con tus propias imágenes o contenido que tengas permiso para editar, capturar o compartir</li><li>No uses la app de una forma que infrinja la propiedad intelectual, la privacidad u otras leyes aplicables</li></ul>
+        <h3>Limitación de responsabilidad</h3>
+        <p>En la máxima medida permitida por la ley, jinshuihu no será responsable de daños indirectos, incidentales o consecuentes derivados del uso de PicTailor.</p>
+        <h3>Contacto</h3>
+        <p>Las preguntas sobre estos términos pueden enviarse a <a href="mailto:jinshuihu.app@gmail.com">jinshuihu.app@gmail.com</a>.</p>
+      </section>
     </div>
   </main>
   <script>
@@ -134,13 +160,15 @@
       "#ja": "ja",
       "#de": "de",
       "#ko": "ko",
-      "#fr": "fr"
+      "#fr": "fr",
+      "#pt-BR": "pt-BR",
+      "#es": "es"
     };
 
     function resolveLanguage() {
       const params = new URLSearchParams(window.location.search);
       const queryLanguage = params.get("lang");
-      if (queryLanguage === "en" || queryLanguage === "zh-hans" || queryLanguage === "zh-hant" || queryLanguage === "ja" || queryLanguage === "de" || queryLanguage === "ko" || queryLanguage === "fr") {
+      if (queryLanguage === "en" || queryLanguage === "zh-hans" || queryLanguage === "zh-hant" || queryLanguage === "ja" || queryLanguage === "de" || queryLanguage === "ko" || queryLanguage === "fr" || queryLanguage === "pt-BR" || queryLanguage === "es") {
         return queryLanguage;
       }
       return hashLanguageMap[window.location.hash] || "en";

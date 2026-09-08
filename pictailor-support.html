@@ -18,6 +18,8 @@
       <button class="pill" type="button" data-lang="de">Deutsch</button>
       <button class="pill" type="button" data-lang="ko">한국어</button>
       <button class="pill" type="button" data-lang="fr">Français</button>
+      <button class="pill" type="button" data-lang="pt-BR">Português (Brasil)</button>
+      <button class="pill" type="button" data-lang="es">Español</button>
     </div>
     <div class="legal tab-shell">
       <section class="tab-panel" data-panel="en">
@@ -104,6 +106,22 @@
           <li>Une brève description du problème et, si possible, des captures d’écran</li>
         </ul>
       </section>
+      <section class="tab-panel hidden" data-panel="pt-BR">
+        <h2>Suporte do PicTailor</h2>
+        <p>Se tiver dúvidas sobre o PicTailor, entre em contato por e-mail.</p>
+        <h3>Contato</h3>
+        <p>E-mail: <a href="mailto:jinshuihu.app@gmail.com">jinshuihu.app@gmail.com</a></p>
+        <h3>Informações úteis para incluir</h3>
+        <ul><li>O modelo do seu iPhone e a versão do iOS</li><li>O recurso usado, como junção de capturas ou captura de página web</li><li>Uma breve descrição do problema e, se possível, capturas de tela</li></ul>
+      </section>
+      <section class="tab-panel hidden" data-panel="es">
+        <h2>Soporte de PicTailor</h2>
+        <p>Si tienes preguntas sobre PicTailor, ponte en contacto con nosotros por correo electrónico.</p>
+        <h3>Contacto</h3>
+        <p>Correo electrónico: <a href="mailto:jinshuihu.app@gmail.com">jinshuihu.app@gmail.com</a></p>
+        <h3>Información útil para incluir</h3>
+        <ul><li>El modelo de tu iPhone y la versión de iOS</li><li>La función que usabas, como la unión de capturas o la captura de páginas web</li><li>Una breve descripción del problema y, si es posible, capturas de pantalla</li></ul>
+      </section>
     </div>
   </main>
   <script>
@@ -116,13 +134,15 @@
       "#ja": "ja",
       "#de": "de",
       "#ko": "ko",
-      "#fr": "fr"
+      "#fr": "fr",
+      "#pt-BR": "pt-BR",
+      "#es": "es"
     };
 
     function resolveLanguage() {
       const params = new URLSearchParams(window.location.search);
       const queryLanguage = params.get("lang");
-      if (queryLanguage === "en" || queryLanguage === "zh-hans" || queryLanguage === "zh-hant" || queryLanguage === "ja" || queryLanguage === "de" || queryLanguage === "ko" || queryLanguage === "fr") {
+      if (queryLanguage === "en" || queryLanguage === "zh-hans" || queryLanguage === "zh-hant" || queryLanguage === "ja" || queryLanguage === "de" || queryLanguage === "ko" || queryLanguage === "fr" || queryLanguage === "pt-BR" || queryLanguage === "es") {
         return queryLanguage;
       }
       return hashLanguageMap[window.location.hash] || "en";

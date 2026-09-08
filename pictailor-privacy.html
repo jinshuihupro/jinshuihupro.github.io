@@ -18,6 +18,8 @@
       <button class="pill" type="button" data-lang="de">Deutsch</button>
       <button class="pill" type="button" data-lang="ko">한국어</button>
       <button class="pill" type="button" data-lang="fr">Français</button>
+      <button class="pill" type="button" data-lang="pt-BR">Português (Brasil)</button>
+      <button class="pill" type="button" data-lang="es">Español</button>
     </div>
     <div class="legal tab-shell">
       <section class="tab-panel" data-panel="en">
@@ -172,6 +174,34 @@
         <h3>Contact</h3>
         <p>Pour toute question sur la confidentialité, contactez <a href="mailto:jinshuihu.app@gmail.com">jinshuihu.app@gmail.com</a>.</p>
       </section>
+      <section class="tab-panel hidden" data-panel="pt-BR">
+        <h2>Política de privacidade</h2>
+        <p>O PicTailor é fornecido por jinshuihu.</p>
+        <h3>Como o app funciona</h3>
+        <p>O PicTailor permite selecionar imagens, unir capturas de tela, capturar páginas web, editar os resultados e exportá-los para o aparelho ou destinos de compartilhamento do sistema.</p>
+        <h3>Informações que processamos</h3>
+        <ul><li>Fotos e capturas de tela escolhidas no app</li><li>Conteúdo de páginas web ao usar a captura web ou a extensão de compartilhamento do Safari</li><li>URLs da área de transferência quando o app volta à tela inicial e há um link de página web válido</li><li>Dados de diagnóstico e falhas usados para melhorar a estabilidade do app</li></ul>
+        <h3>Como as informações são usadas</h3>
+        <ul><li>Para gerar localmente imagens unidas e capturas de páginas web no seu aparelho</li><li>Para salvar imagens exportadas na sua fototeca ou compartilhá-las com destinos escolhidos</li><li>Para investigar falhas e melhorar a confiabilidade</li></ul>
+        <h3>Compartilhamento de dados</h3>
+        <p>Não vendemos suas informações pessoais. Serviços de relatórios de falhas ou infraestrutura, quando usados, servem apenas para operar e diagnosticar o app.</p>
+        <h3>Contato</h3>
+        <p>Para dúvidas sobre privacidade, entre em contato com <a href="mailto:jinshuihu.app@gmail.com">jinshuihu.app@gmail.com</a>.</p>
+      </section>
+      <section class="tab-panel hidden" data-panel="es">
+        <h2>Política de privacidad</h2>
+        <p>PicTailor es proporcionado por jinshuihu.</p>
+        <h3>Cómo funciona la app</h3>
+        <p>PicTailor permite seleccionar imágenes, unir capturas de pantalla, capturar páginas web, editar los resultados y exportarlos al dispositivo o a los destinos de compartir del sistema que elijas.</p>
+        <h3>Información que procesamos</h3>
+        <ul><li>Las fotos y capturas de pantalla que eliges dentro de la app</li><li>El contenido de las páginas web cuando utilizas la captura web o la extensión de compartir de Safari</li><li>Las URL del portapapeles cuando la app vuelve a la pantalla principal y hay un enlace web válido disponible</li><li>Datos de diagnóstico y fallos usados para mejorar la estabilidad de la app</li></ul>
+        <h3>Cómo se usa la información</h3>
+        <ul><li>Para generar localmente imágenes unidas y capturas de páginas web en tu dispositivo</li><li>Para guardar imágenes exportadas en tu fototeca o compartirlas con los destinos que elijas</li><li>Para investigar fallos y mejorar la fiabilidad</li></ul>
+        <h3>Uso compartido de datos</h3>
+        <p>No vendemos tu información personal. Si se usan proveedores de informes de fallos o infraestructura, se usan únicamente para el funcionamiento y diagnóstico de la app.</p>
+        <h3>Contacto</h3>
+        <p>Si tienes preguntas sobre privacidad, contacta con <a href="mailto:jinshuihu.app@gmail.com">jinshuihu.app@gmail.com</a>.</p>
+      </section>
     </div>
   </main>
   <script>
@@ -184,13 +214,15 @@
       "#ja": "ja",
       "#de": "de",
       "#ko": "ko",
-      "#fr": "fr"
+      "#fr": "fr",
+      "#pt-BR": "pt-BR",
+      "#es": "es"
     };
 
     function resolveLanguage() {
       const params = new URLSearchParams(window.location.search);
       const queryLanguage = params.get("lang");
-      if (queryLanguage === "en" || queryLanguage === "zh-hans" || queryLanguage === "zh-hant" || queryLanguage === "ja" || queryLanguage === "de" || queryLanguage === "ko" || queryLanguage === "fr") {
+      if (queryLanguage === "en" || queryLanguage === "zh-hans" || queryLanguage === "zh-hant" || queryLanguage === "ja" || queryLanguage === "de" || queryLanguage === "ko" || queryLanguage === "fr" || queryLanguage === "pt-BR" || queryLanguage === "es") {
         return queryLanguage;
       }
       return hashLanguageMap[window.location.hash] || "en";
