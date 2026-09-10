@@ -18,6 +18,8 @@
       <button class="pill" type="button" data-lang="de">Deutsch</button>
       <button class="pill" type="button" data-lang="fr">Français</button>
       <button class="pill" type="button" data-lang="it">Italiano</button>
+      <button class="pill" type="button" data-lang="pt-br">Português (Brasil)</button>
+      <button class="pill" type="button" data-lang="es">Español</button>
     </div>
     <div class="legal tab-shell">
       <section class="tab-panel" data-panel="en">
@@ -118,6 +120,34 @@
           <li>Una breve descrizione del problema e screenshot, se disponibili</li>
         </ul>
       </section>
+      <section class="tab-panel hidden" data-panel="pt-br">
+        <h2>Suporte Click Cast</h2>
+        <p>Se precisar de ajuda para usar o Click Cast com sua TV Sony ou LG compatível, entre em contato por e-mail.</p>
+        <h3>Contato</h3>
+        <p>E-mail: <a href="mailto:jinshuihu.app@gmail.com">jinshuihu.app@gmail.com</a></p>
+        <h3>Detalhes úteis para incluir</h3>
+        <ul>
+          <li>O modelo do seu iPhone e a versão do iOS</li>
+          <li>A marca e o modelo da sua TV (Sony ou LG)</li>
+          <li>Se o iPhone e a TV estão na mesma rede Wi-Fi</li>
+          <li>Se você está tentando emparelhar, usar o controle, transmitir mídia ou usar o Premium</li>
+          <li>Uma breve descrição do problema e capturas de tela, se possível</li>
+        </ul>
+      </section>
+      <section class="tab-panel hidden" data-panel="es">
+        <h2>Soporte de Click Cast</h2>
+        <p>Si necesitas ayuda para usar Click Cast con tu TV Sony o LG compatible, contáctanos por correo.</p>
+        <h3>Contacto</h3>
+        <p>Correo: <a href="mailto:jinshuihu.app@gmail.com">jinshuihu.app@gmail.com</a></p>
+        <h3>Datos útiles para incluir</h3>
+        <ul>
+          <li>El modelo de tu iPhone y la versión de iOS</li>
+          <li>La marca y el modelo de tu TV (Sony o LG)</li>
+          <li>Si el iPhone y la TV están en la misma red Wi-Fi</li>
+          <li>Si estás intentando emparejar, usar el control remoto, transmitir contenido o usar Premium</li>
+          <li>Una breve descripción del problema y capturas de pantalla, si es posible</li>
+        </ul>
+      </section>
     </div>
   </main>
   <script>
@@ -130,13 +160,15 @@
       "#ja": "ja",
       "#de": "de",
       "#fr": "fr",
-      "#it": "it"
+      "#it": "it",
+      "#pt-br": "pt-br",
+      "#es": "es"
     };
 
     function resolveLanguage() {
       const params = new URLSearchParams(window.location.search);
       const queryLanguage = params.get("lang");
-      const supported = ["en", "zh-hans", "zh-hant", "ja", "de", "fr", "it"];
+      const supported = ["en", "zh-hans", "zh-hant", "ja", "de", "fr", "it", "pt-br", "es"];
       if (supported.includes(queryLanguage)) {
         return queryLanguage;
       }
