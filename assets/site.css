@@ -99,6 +99,25 @@ main {
   line-height: 1.7;
 }
 
+.faq-lead {
+  margin: 0 0 8px;
+}
+
+.faq-item + .faq-item {
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+}
+
+.faq-item h3 {
+  margin: 0 0 6px;
+  font-size: 17px;
+}
+
+.faq-item p {
+  margin: 0;
+}
+
 .links {
   display: grid;
   gap: 12px;

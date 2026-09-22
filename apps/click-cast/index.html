@@ -28,6 +28,12 @@
       </div>
     </section>
 
+    <section class="card" id="notes-card">
+      <h2 class="section-title" id="notes-title">Notes</h2>
+      <p class="faq-lead" id="notes-lead"></p>
+      <div id="notes-body"></div>
+    </section>
+
     <section class="card">
       <h2 class="section-title" id="links-title">Public Links</h2>
       <div class="links">
@@ -50,6 +56,14 @@
     const contentByLanguage = {
       en: {
         hero: "Click Cast turns your iPhone into a remote for Sony and LG compatible smart TVs on the same Wi-Fi network. Discover TVs automatically, pair once, and control navigation, playback, volume, and power. Choose your preferred language below.",
+        notesTitle: "Before you cast",
+        notesLead: "If the remote already works but a photo or video never appears on the TV, these are the cases we see most often.",
+        notes: [
+          { q: "Use the same Wi-Fi", a: "Keep your iPhone and TV on the same home Wi-Fi. A guest network, or a router that blocks devices from seeing each other, can hide the TV or stop a photo or video from arriving." },
+          { q: "The remote and casting use different permissions", a: "The one-time PIN pairing is only for the remote: navigation, volume, and power. Sending a photo or video also requires the TV to allow this iPhone as a player. If the remote already works, leave the pairing in place and change the TV’s media permission instead." },
+          { q: "On a Sony TV, allow “Click-Cast”", a: "On the TV, open Settings → Network → Home network → Renderer → Access permission. The names vary by model and by the language set on the TV. Turn on automatic permission. In custom settings, if a device is listed as unrecognized and switched off, delete that entry or turn it on. Cast again. The TV should list this iPhone as Click-Cast and allow it." },
+          { q: "Leave the app open while something is on screen", a: "The TV reads the photo or video from your iPhone. If Click Cast moves to the background, iOS may pause that transfer and playback can stop." }
+        ],
         title: "Public Links",
         contact: "Developer / Support contact: <a href=\"mailto:jinshuihu.app@gmail.com\">jinshuihu.app@gmail.com</a>. Please include your device model, iOS version, TV brand/model, and a short description of the issue.",
         support: { label: "Support", action: "Open", href: "/click-cast-support.html?lang=en" },
@@ -58,6 +72,14 @@
       },
       "zh-hans": {
         hero: "Click Cast 可将 iPhone 变为同一 Wi-Fi 下兼容 Sony 与 LG 智能电视的遥控器。自动发现电视、一次配对后即可控制导航、播放、音量与电源。请选择下方语言。",
+        notesTitle: "投屏须知",
+        notesLead: "遥控已经能用，但照片或视频没有出现在电视上时，多半是下面几种情况。",
+        notes: [
+          { q: "手机和电视连同一个 Wi-Fi", a: "请把 iPhone 和电视连到同一个家庭 Wi-Fi。访客网络，或路由器开启了设备隔离时，电视可能搜不到，照片和视频也传不过去。" },
+          { q: "遥控配对和投屏许可是分开的", a: "一次性 PIN 配对只用于遥控，包括方向键、音量和电源。投放照片或视频时，电视还要允许这台 iPhone 作为播放设备。遥控已经能用时，不必解除配对，只要在电视上调整媒体播放的访问许可。" },
+          { q: "Sony 电视请允许名为 Click-Cast 的设备", a: "在电视上打开「设置 → 网络 → 家庭网络 → 渲染器 → 访问许可」。菜单名称会随机型和电视语言略有不同。请打开「自动允许」。进入「自定义设置」后，如果有一条无法识别的设备且状态为关，删掉它，或把状态改成开。然后重新投屏。电视上应出现名为 Click-Cast 的设备，并处于允许状态。" },
+          { q: "画面还在电视上时，请把 App 留在前台", a: "照片和视频是由电视向 iPhone 读取的。Click Cast 进入后台后，iOS 可能会暂停这次传输，播放也会跟着停下来。" }
+        ],
         title: "公共链接",
         contact: "开发者 / 支持联系邮箱：<a href=\"mailto:jinshuihu.app@gmail.com\">jinshuihu.app@gmail.com</a>。请附上设备型号、iOS 版本、电视品牌/型号，以及问题的简要说明。",
         support: { label: "支持", action: "打开", href: "/click-cast-support.html?lang=zh-hans" },
@@ -66,6 +88,14 @@
       },
       "zh-hant": {
         hero: "Click Cast 可將 iPhone 變為同一 Wi-Fi 下相容 Sony 與 LG 智慧電視的遙控器。自動發現電視、一次配對後即可控制導航、播放、音量與電源。請選擇下方語言。",
+        notesTitle: "投屏須知",
+        notesLead: "遙控已經能用，但照片或影片沒有出現在電視上時，多半是下面幾種情況。",
+        notes: [
+          { q: "手機和電視連同一個 Wi-Fi", a: "請把 iPhone 和電視連到同一個家庭 Wi-Fi。訪客網路，或路由器開啟了裝置隔離時，電視可能搜不到，照片和影片也傳不過去。" },
+          { q: "遙控配對和投屏許可是分開的", a: "一次性 PIN 配對只用於遙控，包括方向鍵、音量和電源。投放照片或影片時，電視還要允許這台 iPhone 作為播放裝置。遙控已經能用時，不必解除配對，只要在電視上調整媒體播放的存取許可。" },
+          { q: "Sony 電視請允許名為 Click-Cast 的裝置", a: "在電視上打開「設定 → 網路 → 家庭網路 → 渲染器 → 存取許可」。選單名稱會隨機型和電視語言略有不同。請打開「自動允許」。進入「自訂設定」後，如果有一筆無法識別的裝置且狀態為關，刪除它，或把狀態改成開。然後重新投放。電視上應出現名為 Click-Cast 的裝置，並處於允許狀態。" },
+          { q: "畫面還在電視上時，請把 App 留在前景", a: "照片和影片是由電視向 iPhone 讀取的。Click Cast 進入背景後，iOS 可能會暫停這次傳輸，播放也會跟著停下來。" }
+        ],
         title: "公共連結",
         contact: "開發者 / 支援聯絡信箱：<a href=\"mailto:jinshuihu.app@gmail.com\">jinshuihu.app@gmail.com</a>。請附上裝置型號、iOS 版本、電視品牌/型號，以及問題的簡要說明。",
         support: { label: "支援", action: "打開", href: "/click-cast-support.html?lang=zh-hant" },
@@ -74,6 +104,14 @@
       },
       ja: {
         hero: "Click Cast は、同一 Wi-Fi 上の Sony および LG 対応スマート TV 向け iPhone リモコンです。TV を自動検出し、一度ペアリングすれば、ナビゲーション、再生、音量、電源を操作できます。下から言語を選んでください。",
+        notesTitle: "キャストの前に",
+        notesLead: "リモコンは使えるのに、写真や動画が TV に表示されないときは、次のケースがほとんどです。",
+        notes: [
+          { q: "同じ Wi-Fi に接続する", a: "iPhone と TV は、同じ家庭用 Wi-Fi に接続してください。ゲストネットワークや、端末同士の通信を遮断する設定では、TV が見つからない、または写真や動画が届かないことがあります。" },
+          { q: "リモコンのペアリングとキャストの許可は別です", a: "初回の PIN ペアリングは、方向キー、音量、電源などのリモコン操作に使います。写真や動画を映すには、TV 側でこの iPhone の再生を許可する必要があります。リモコンが使える場合は、ペアリングを解除せず、TV の再生許可だけを変更してください。" },
+          { q: "Sony 製 TV では「Click-Cast」を許可する", a: "TV で「設定 → ネットワーク → ホームネットワーク → レンダラー → アクセス許可」を開きます。項目名は機種や TV の表示言語によって異なります。「自動許可」をオンにしてください。「カスタム設定」に、認識できないデバイスがオフで表示されている場合は、その項目を削除するかオンにします。その後、もう一度キャストしてください。TV には Click-Cast という名前で表示され、許可されるはずです。" },
+          { q: "再生中はアプリを前面のままにする", a: "写真と動画は、TV が iPhone から読み込みます。Click Cast がバックグラウンドに移ると、iOS が転送を止めることがあり、再生も止まります。" }
+        ],
         title: "公開リンク",
         contact: "開発者 / サポート連絡先：<a href=\"mailto:jinshuihu.app@gmail.com\">jinshuihu.app@gmail.com</a>。機種、iOS バージョン、TV のブランド/型番、問題の概要を添えてください。",
         support: { label: "サポート", action: "開く", href: "/click-cast-support.html?lang=ja" },
@@ -82,6 +120,14 @@
       },
       fr: {
         hero: "Click Cast transforme votre iPhone en télécommande pour les TV Sony BRAVIA et LG webOS compatibles sur le même réseau Wi-Fi. Détectez et associez votre téléviseur, puis contrôlez la navigation, la lecture, le volume et l’alimentation. Les fonctions varient selon le modèle. Choisissez votre langue ci-dessous.",
+        notesTitle: "Avant de diffuser",
+        notesLead: "Si la télécommande fonctionne déjà, mais qu’une photo ou une vidéo n’apparaît pas sur le téléviseur, ce sont les cas les plus fréquents.",
+        notes: [
+          { q: "Utilisez le même Wi-Fi", a: "Gardez l’iPhone et le téléviseur sur le même Wi-Fi domestique. Un réseau invité, ou un routeur qui isole les appareils, peut masquer le téléviseur ou empêcher l’affichage d’une photo ou d’une vidéo." },
+          { q: "La télécommande et la diffusion n’ont pas la même autorisation", a: "L’appairage par code PIN sert uniquement à la télécommande : navigation, volume et alimentation. Envoyer une photo ou une vidéo demande en plus que le téléviseur autorise cet iPhone comme lecteur. Si la télécommande fonctionne déjà, ne supprimez pas l’appairage. Modifiez seulement l’autorisation de lecture sur le téléviseur." },
+          { q: "Sur un téléviseur Sony, autorisez « Click-Cast »", a: "Sur le téléviseur, ouvrez Réglages → Réseau → Réseau domestique → Renderer → Autorisation d’accès. Les noms varient selon le modèle et la langue du téléviseur. Activez l’autorisation automatique. Dans les réglages personnalisés, si un appareil non reconnu est désactivé, supprimez-le ou activez-le. Relancez ensuite la diffusion. Le téléviseur doit afficher cet iPhone sous le nom Click-Cast et l’autoriser." },
+          { q: "Laissez l’app ouverte pendant la lecture", a: "Le téléviseur lit la photo ou la vidéo depuis l’iPhone. Si Click Cast passe en arrière-plan, iOS peut interrompre ce transfert et la lecture s’arrête." }
+        ],
         title: "Liens utiles",
         contact: "Assistance / développeur : <a href=\"mailto:jinshuihu.app@gmail.com\">jinshuihu.app@gmail.com</a>. Indiquez le modèle de votre appareil, la version d’iOS, la marque et le modèle du téléviseur, ainsi qu’une brève description du problème.",
         support: { label: "Assistance", action: "Ouvrir", href: "/click-cast-support.html?lang=fr" },
@@ -90,6 +136,14 @@
       },
       it: {
         hero: "Click Cast trasforma il tuo iPhone in un telecomando per le TV Sony BRAVIA e LG webOS compatibili sulla stessa rete Wi-Fi. Trova e abbina il televisore, poi controlla navigazione, riproduzione, volume e accensione. Le funzioni variano in base al modello. Scegli la lingua qui sotto.",
+        notesTitle: "Prima di trasmettere",
+        notesLead: "Se il telecomando funziona già, ma una foto o un video non compare sulla TV, di solito si tratta di uno di questi casi.",
+        notes: [
+          { q: "Usa la stessa rete Wi-Fi", a: "Tieni iPhone e TV sulla stessa rete Wi-Fi di casa. Una rete ospiti, o un router che isola i dispositivi, può nascondere la TV o impedire la visualizzazione di foto e video." },
+          { q: "Telecomando e trasmissione usano permessi diversi", a: "L’abbinamento con PIN serve solo al telecomando: navigazione, volume e accensione. Per inviare una foto o un video, la TV deve anche consentire a questo iPhone di riprodurre i contenuti. Se il telecomando funziona già, non rimuovere l’abbinamento. Modifica solo il permesso di riproduzione sulla TV." },
+          { q: "Sulle TV Sony, consenti «Click-Cast»", a: "Sulla TV apri Impostazioni → Rete → Rete domestica → Renderer → Permesso di accesso. I nomi cambiano in base al modello e alla lingua della TV. Attiva il permesso automatico. Nelle impostazioni personalizzate, se un dispositivo non riconosciuto è disattivato, eliminalo o attivalo. Avvia di nuovo la trasmissione. La TV dovrebbe mostrare questo iPhone come Click-Cast e consentirlo." },
+          { q: "Tieni l’app aperta durante la riproduzione", a: "La TV legge la foto o il video dall’iPhone. Se Click Cast va in background, iOS può interrompere il trasferimento e la riproduzione si ferma." }
+        ],
         title: "Link utili",
         contact: "Sviluppatore / assistenza: <a href=\"mailto:jinshuihu.app@gmail.com\">jinshuihu.app@gmail.com</a>. Indica il modello del dispositivo, la versione di iOS, la marca e il modello della TV e una breve descrizione del problema.",
         support: { label: "Assistenza", action: "Apri", href: "/click-cast-support.html?lang=it" },
@@ -98,6 +152,14 @@
       },
       "pt-br": {
         hero: "O Click Cast transforma seu iPhone em um controle remoto para TVs Sony BRAVIA e LG webOS compatíveis na mesma rede Wi-Fi. Descubra e emparelhe a TV, depois controle navegação, reprodução, volume e energia. Os recursos variam conforme o modelo. Escolha o idioma abaixo.",
+        notesTitle: "Antes de transmitir",
+        notesLead: "Se o controle já funciona, mas uma foto ou um vídeo não aparece na TV, estes são os casos mais comuns.",
+        notes: [
+          { q: "Use o mesmo Wi-Fi", a: "Mantenha o iPhone e a TV na mesma rede Wi-Fi de casa. Uma rede de convidados, ou um roteador que isola os aparelhos, pode ocultar a TV ou impedir que fotos e vídeos apareçam." },
+          { q: "O controle remoto e a transmissão têm permissões diferentes", a: "O pareamento com PIN vale apenas para o controle: navegação, volume e energia. Enviar uma foto ou um vídeo também exige que a TV permita este iPhone como reprodutor. Se o controle já funciona, não remova o pareamento. Ajuste apenas a permissão de reprodução na TV." },
+          { q: "Em TVs Sony, permita “Click-Cast”", a: "Na TV, abra Ajustes → Rede → Rede doméstica → Renderer → Permissão de acesso. Os nomes variam conforme o modelo e o idioma da TV. Ative a permissão automática. Nas configurações personalizadas, se houver um dispositivo não reconhecido desativado, apague essa entrada ou ative-a. Transmita de novo. A TV deve listar este iPhone como Click-Cast e permitir o acesso." },
+          { q: "Deixe o app aberto enquanto algo estiver na tela", a: "A TV lê a foto ou o vídeo a partir do iPhone. Se o Click Cast for para segundo plano, o iOS pode pausar essa transferência e a reprodução para." }
+        ],
         title: "Links úteis",
         contact: "Desenvolvedor / suporte: <a href=\"mailto:jinshuihu.app@gmail.com\">jinshuihu.app@gmail.com</a>. Inclua o modelo do dispositivo, a versão do iOS, a marca e o modelo da TV e uma breve descrição do problema.",
         support: { label: "Suporte", action: "Abrir", href: "/click-cast-support.html?lang=pt-br" },
@@ -106,6 +168,14 @@
       },
       es: {
         hero: "Click Cast convierte tu iPhone en un control remoto para TVs Sony BRAVIA y LG webOS compatibles en la misma red Wi-Fi. Descubre y empareja el televisor, luego controla navegación, reproducción, volumen y encendido. Las funciones varían según el modelo. Elige el idioma abajo.",
+        notesTitle: "Antes de enviar contenido",
+        notesLead: "Si el mando ya funciona, pero una foto o un vídeo no aparece en la TV, suele tratarse de uno de estos casos.",
+        notes: [
+          { q: "Usa la misma red Wi-Fi", a: "Mantén el iPhone y la TV en la misma red Wi-Fi de casa. Una red de invitados, o un router que aísla los dispositivos, puede ocultar la TV o impedir que se vean fotos y vídeos." },
+          { q: "El mando y el envío de contenido usan permisos distintos", a: "El emparejamiento con PIN sirve solo para el mando: navegación, volumen y encendido. Enviar una foto o un vídeo exige además que la TV permita este iPhone como reproductor. Si el mando ya funciona, no elimines el emparejamiento. Cambia solo el permiso de reproducción en la TV." },
+          { q: "En televisores Sony, permite «Click-Cast»", a: "En la TV, abre Ajustes → Red → Red doméstica → Renderer → Permiso de acceso. Los nombres cambian según el modelo y el idioma de la TV. Activa el permiso automático. En los ajustes personalizados, si aparece un dispositivo no reconocido y está desactivado, bórralo o actívalo. Vuelve a enviar el contenido. La TV debería mostrar este iPhone como Click-Cast y permitirlo." },
+          { q: "Deja la app abierta mientras haya algo en pantalla", a: "La TV lee la foto o el vídeo desde el iPhone. Si Click Cast pasa a segundo plano, iOS puede pausar esa transferencia y la reproducción se detiene." }
+        ],
         title: "Enlaces útiles",
         contact: "Desarrollador / soporte: <a href=\"mailto:jinshuihu.app@gmail.com\">jinshuihu.app@gmail.com</a>. Incluye el modelo del dispositivo, la versión de iOS, la marca y el modelo de la TV y una breve descripción del problema.",
         support: { label: "Soporte", action: "Abrir", href: "/click-cast-support.html?lang=es" },
@@ -114,6 +184,14 @@
       },
       de: {
         hero: "Click Cast macht aus deinem iPhone eine Fernbedienung für Sony- und LG-kompatible Smart-TVs im selben Wi-Fi. TVs werden automatisch gefunden, einmal gekoppelt, und du steuerst Navigation, Wiedergabe, Lautstärke und Ein/Aus. Wähle unten deine Sprache.",
+        notesTitle: "Vor dem Wiedergeben",
+        notesLead: "Wenn die Fernbedienung schon funktioniert, ein Foto oder Video aber nicht auf dem TV erscheint, sind das die häufigsten Fälle.",
+        notes: [
+          { q: "Dasselbe WLAN verwenden", a: "iPhone und TV sollten im selben Heim-WLAN sein. Ein Gastnetz oder ein Router, der Geräte voneinander trennt, kann den TV ausblenden oder verhindern, dass Fotos und Videos ankommen." },
+          { q: "Fernbedienung und Wiedergabe sind getrennt erlaubt", a: "Die einmalige PIN-Kopplung gilt nur für die Fernbedienung: Navigation, Lautstärke und Ein/Aus. Fotos und Videos brauchen zusätzlich die Erlaubnis des TVs, dieses iPhone als Wiedergabegerät zu nutzen. Wenn die Fernbedienung schon funktioniert, heben Sie die Kopplung nicht auf. Ändern Sie nur die Medienfreigabe am TV." },
+          { q: "Bei Sony-TVs „Click-Cast“ zulassen", a: "Öffnen Sie am TV Einstellungen → Netzwerk → Heimnetzwerk → Renderer → Zugriffserlaubnis. Die Bezeichnungen unterscheiden sich je nach Modell und Sprache des TVs. Schalten Sie die automatische Erlaubnis ein. Steht unter „Benutzerdefinierte Einstellungen“ ein unbekanntes Gerät auf Aus, löschen Sie den Eintrag oder schalten Sie ihn ein. Starten Sie die Wiedergabe danach erneut. Der TV sollte dieses iPhone als Click-Cast anzeigen und zulassen." },
+          { q: "Die App während der Wiedergabe geöffnet lassen", a: "Der TV lädt Foto oder Video vom iPhone. Wechselt Click Cast in den Hintergrund, kann iOS diese Übertragung anhalten und die Wiedergabe stoppt." }
+        ],
         title: "Öffentliche Links",
         contact: "Entwickler / Support-Kontakt: <a href=\"mailto:jinshuihu.app@gmail.com\">jinshuihu.app@gmail.com</a>. Bitte Gerätemodell, iOS-Version, TV-Marke/Modell und eine kurze Problembeschreibung angeben.",
         support: { label: "Support", action: "Öffnen", href: "/click-cast-support.html?lang=de" },
@@ -123,6 +201,9 @@
     };
 
     const heroCopy = document.getElementById("hero-copy");
+    const notesTitle = document.getElementById("notes-title");
+    const notesLead = document.getElementById("notes-lead");
+    const notesBody = document.getElementById("notes-body");
     const linksTitle = document.getElementById("links-title");
     const contactNotice = document.getElementById("contact-notice");
     const supportLink = document.getElementById("support-link");
@@ -148,6 +229,19 @@
     function applyLanguage(language) {
       const content = contentByLanguage[language];
       heroCopy.textContent = content.hero;
+      notesTitle.textContent = content.notesTitle;
+      notesLead.textContent = content.notesLead;
+      notesBody.replaceChildren();
+      content.notes.forEach((item) => {
+        const article = document.createElement("article");
+        article.className = "faq-item";
+        const heading = document.createElement("h3");
+        heading.textContent = item.q;
+        const paragraph = document.createElement("p");
+        paragraph.textContent = item.a;
+        article.append(heading, paragraph);
+        notesBody.append(article);
+      });
       linksTitle.textContent = content.title;
       contactNotice.innerHTML = content.contact;
       updateLink(supportLink, content.support);
