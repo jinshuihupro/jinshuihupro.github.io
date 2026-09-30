@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://jinshuihupro.github.io/sitemap.xml
