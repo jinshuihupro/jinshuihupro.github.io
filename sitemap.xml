@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://jinshuihupro.github.io/</loc></url>
+  <url><loc>https://jinshuihupro.github.io/apps/click-cast/</loc></url>
+  <url><loc>https://jinshuihupro.github.io/apps/idshot/</loc></url>
+  <url><loc>https://jinshuihupro.github.io/apps/one-day-closer/</loc></url>
   <url><loc>https://jinshuihupro.github.io/apps/pictailor/</loc></url>
   <url><loc>https://jinshuihupro.github.io/apps/pictailor/guides/chat-long-screenshot.html</loc></url>
   <url><loc>https://jinshuihupro.github.io/apps/pictailor/guides/chat-long-screenshot.zh-hans.html</loc></url>
@@ -8,4 +11,16 @@
   <url><loc>https://jinshuihupro.github.io/apps/pictailor/guides/full-page-web-screenshot.zh-hans.html</loc></url>
   <url><loc>https://jinshuihupro.github.io/apps/pictailor/guides/screen-recording-to-long-image.html</loc></url>
   <url><loc>https://jinshuihupro.github.io/apps/pictailor/guides/screen-recording-to-long-image.zh-hans.html</loc></url>
+  <url><loc>https://jinshuihupro.github.io/click-cast-privacy.html</loc></url>
+  <url><loc>https://jinshuihupro.github.io/click-cast-support.html</loc></url>
+  <url><loc>https://jinshuihupro.github.io/click-cast-terms.html</loc></url>
+  <url><loc>https://jinshuihupro.github.io/idshot-privacy.html</loc></url>
+  <url><loc>https://jinshuihupro.github.io/idshot-support.html</loc></url>
+  <url><loc>https://jinshuihupro.github.io/idshot-terms.html</loc></url>
+  <url><loc>https://jinshuihupro.github.io/one-day-closer-privacy.html</loc></url>
+  <url><loc>https://jinshuihupro.github.io/one-day-closer-support.html</loc></url>
+  <url><loc>https://jinshuihupro.github.io/one-day-closer-terms.html</loc></url>
+  <url><loc>https://jinshuihupro.github.io/pictailor-privacy.html</loc></url>
+  <url><loc>https://jinshuihupro.github.io/pictailor-support.html</loc></url>
+  <url><loc>https://jinshuihupro.github.io/pictailor-terms.html</loc></url>
 </urlset>
