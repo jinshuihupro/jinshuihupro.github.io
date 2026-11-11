@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-itunes-app" content="app-id=6797477945" />
-  <meta name="description" content="One Day Closer turns your retirement goal into a gentle daily progress on your iPhone." />
+  <meta name="description" content="One Day Closer opens to a full-screen landscape and how long until you retire." />
   <title>One Day Closer | Goldmere</title>
   <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="/assets/site.css" />
@@ -17,7 +17,7 @@
     <section class="hero">
       <span class="eyebrow">App Overview</span>
       <h1>One Day Closer</h1>
-      <p id="hero-copy">One Day Closer turns your far-off retirement goal into a gentle daily progress on your home and lock screen. Instead of counting the days you have left, it shows how far you have already come. Choose your preferred language below.</p>
+      <p id="hero-copy">One Day Closer opens to a full-screen landscape and how long until you retire. Every day you open it, you are one day closer. Choose your preferred language below.</p>
       <div class="app-actions"><a class="btn" href="https://apps.apple.com/app/apple-store/id6797477945?pt=123596542&amp;ct=website&amp;mt=8" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.37 12.6c-.02-2.3 1.88-3.4 1.96-3.46-1.07-1.56-2.73-1.78-3.32-1.8-1.41-.14-2.76.83-3.47.83-.72 0-1.82-.81-3-.79-1.54.02-2.96.9-3.76 2.28-1.6 2.78-.41 6.9 1.15 9.16.76 1.1 1.67 2.34 2.86 2.3 1.15-.05 1.58-.74 2.97-.74 1.38 0 1.77.74 2.98.72 1.23-.02 2.01-1.12 2.76-2.23.87-1.28 1.23-2.52 1.25-2.58-.03-.01-2.4-.92-2.42-3.66zM14.1 5.84c.63-.77 1.06-1.83.94-2.89-.91.04-2.02.61-2.67 1.37-.58.67-1.1 1.76-.96 2.8 1.02.08 2.06-.52 2.69-1.28z"/></svg>App Store</a></div>
       <div class="meta-row" id="language-switcher">
         <button class="pill active" type="button" data-lang="en">English</button>
@@ -25,6 +25,21 @@
         <button class="pill" type="button" data-lang="zh-hant">繁體中文</button>
       </div>
     </section>
+
+    <section class="card">
+      <h2 class="section-title" id="features-title">What's in One Day Closer</h2>
+      <ul id="features-list">
+        <li>A full-screen landscape home. Swipe for days, years and months, minutes and seconds.</li>
+        <li>aA: change the photo, font and color, or use your own photo.</li>
+        <li>Big Countdown: months, weeks, days and seconds at once, in portrait or landscape.</li>
+        <li>Count workdays only, and take off your vacation days.</li>
+        <li>A daily reminder at the time you choose. You can turn it off any time.</li>
+        <li>Home Screen, Lock Screen and StandBy widgets with your photo as the background.</li>
+        <li>Share this page, a designed card or a single line, or save the card to Photos.</li>
+      </ul>
+      <p id="features-note">No account, no ads, no in-app purchases. Your date and your photo stay on this iPhone. Built-in photos are from Unsplash.</p>
+    </section>
+    <!-- Screenshots: none yet. Add 2.0.0 App Store screenshots here once they are final. -->
 
     <section class="card">
       <h2 class="section-title" id="links-title">Public Links</h2>
@@ -46,24 +61,33 @@
   <script>
     const contentByLanguage = {
       en: {
+        featuresTitle: "What's in One Day Closer",
+        features: ["A full-screen landscape home. Swipe for days, years and months, minutes and seconds.", "aA: change the photo, font and color, or use your own photo.", "Big Countdown: months, weeks, days and seconds at once, in portrait or landscape.", "Count workdays only, and take off your vacation days.", "A daily reminder at the time you choose. You can turn it off any time.", "Home Screen, Lock Screen and StandBy widgets with your photo as the background.", "Share this page, a designed card or a single line, or save the card to Photos."],
+        featuresNote: "No account, no ads, no in-app purchases. Your date and your photo stay on this iPhone. Built-in photos are from Unsplash.",
         hero:
-          "One Day Closer turns your far-off retirement goal into a gentle daily progress on your home and lock screen. Instead of counting the days you have left, it shows how far you have already come. Choose your preferred language below.",
+          "One Day Closer opens to a full-screen landscape and how long until you retire. Every day you open it, you are one day closer. Choose your preferred language below.",
         title: "Public Links",
         support: { label: "Support", action: "Open", href: "/one-day-closer-support.html?lang=en" },
         privacy: { label: "Privacy Policy", action: "Open", href: "/one-day-closer-privacy.html?lang=en" },
         terms: { label: "Terms of Service", action: "Open", href: "/one-day-closer-terms.html?lang=en" }
       },
       "zh-hans": {
+        featuresTitle: "又近一天里有什么",
+        features: ["全屏风景首页，左右滑动看天数、年月日、分钟和秒。", "aA 外观：换照片、字体和颜色，也能用自己的照片。", "大字倒数：月、周、天、秒同屏，可横屏。", "可以只算工作日，并扣除假期天数。", "每日提醒，时间自己定，随时可以关掉。", "桌面、锁屏和待机小组件，用你的照片做背景。", "分享当前画面、分享卡或一句话，也可以把分享卡存到相册。"],
+        featuresNote: "无账号、无广告、无内购。你的日期和照片只留在这台 iPhone 上。内置照片来自 Unsplash。",
         hero:
-          "又近一天把遥远的退休目标，变成桌面与锁屏上每天可见的进度。它不强调还剩多少天，而是让你看见自己已经走了多远。请选择下方语言。",
+          "又近一天打开就是全屏风景，和离退休还有多久。每天打开，都更近一天。请选择下方语言。",
         title: "公共链接",
         support: { label: "支持", action: "打开", href: "/one-day-closer-support.html?lang=zh-hans" },
         privacy: { label: "隐私政策", action: "打开", href: "/one-day-closer-privacy.html?lang=zh-hans" },
         terms: { label: "服务条款", action: "打开", href: "/one-day-closer-terms.html?lang=zh-hans" }
       },
       "zh-hant": {
+        featuresTitle: "又近一天裡有什麼",
+        features: ["全螢幕風景首頁，左右滑動看天數、年月日、分鐘和秒。", "aA 外觀：換照片、字體和顏色，也能用自己的照片。", "大字倒數：月、週、天、秒同屏，可橫向顯示。", "可以只算工作日，並扣除假期天數。", "每日提醒，時間自己定，隨時可以關掉。", "主畫面、鎖定畫面和待機小工具，用你的照片做背景。", "分享目前畫面、分享卡或一句話，也可以把分享卡存到相簿。"],
+        featuresNote: "無帳號、無廣告、無內購。你的日期和照片只留在這台 iPhone 上。內建照片來自 Unsplash。",
         hero:
-          "又近一天把遙遠的退休目標，變成桌面與鎖定畫面上每天可見的進度。它不強調還剩多少天，而是讓你看見自己已經走了多遠。請選擇下方語言。",
+          "又近一天打開就是全螢幕風景，和離退休還有多久。每天打開，都更近一天。請選擇下方語言。",
         title: "公共連結",
         support: { label: "支援", action: "打開", href: "/one-day-closer-support.html?lang=zh-hant" },
         privacy: { label: "隱私政策", action: "打開", href: "/one-day-closer-privacy.html?lang=zh-hant" },
@@ -73,6 +97,9 @@
 
     const heroCopy = document.getElementById("hero-copy");
     const linksTitle = document.getElementById("links-title");
+    const featuresTitle = document.getElementById("features-title");
+    const featuresList = document.getElementById("features-list");
+    const featuresNote = document.getElementById("features-note");
     const supportLink = document.getElementById("support-link");
     const privacyLink = document.getElementById("privacy-link");
     const termsLink = document.getElementById("terms-link");
@@ -97,6 +124,13 @@
       const content = contentByLanguage[language];
       heroCopy.textContent = content.hero;
       linksTitle.textContent = content.title;
+      featuresTitle.textContent = content.featuresTitle;
+      featuresList.replaceChildren(...content.features.map((text) => {
+        const item = document.createElement("li");
+        item.textContent = text;
+        return item;
+      }));
+      featuresNote.textContent = content.featuresNote;
       updateLink(supportLink, content.support);
       updateLink(privacyLink, content.privacy);
       updateLink(termsLink, content.terms);
