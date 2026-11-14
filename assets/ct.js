@@ -8,7 +8,7 @@
     else ct = sessionStorage.getItem('ct');
   } catch (e) {}
   if (!ct) return;
-  document.querySelectorAll('a[href^="https://apps.apple.com/app/apple-store/"]').forEach(function (a) {
+  document.querySelectorAll('a[href^="https://apps.apple.com/app/"]').forEach(function (a) {
     var url = new URL(a.href);
     url.searchParams.set('ct', ct);
     a.href = url;
